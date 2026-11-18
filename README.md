@@ -40,9 +40,17 @@ Every QuickNode and dRPC chain is probed on each run. Probing:
 
 QuickNode and dRPC are probed independently — they may expose different trace methods for the same chain. Each probe has a 45 s total timeout (accommodates retries across individual RPC calls).
 
-Routescan and third-party Blockscout instances do **not** qualify a chain for inclusion on their own — they only contribute `fetchContractCreationTxUsing` data. We also make use of the [chainid.network/chains.json](https://chainid.network/chains.json) (a.k.a "chainlist") file to get the public RPCs of the chains if no paid provider RPCs are available.
+Routescan, third-party Blockscout instances and Envio HyperSync do **not** qualify a chain for inclusion on their own — they only contribute `fetchContractCreationTxUsing` data, and they are not listed in `discoveredBy`. We also make use of the [chainid.network/chains.json](https://chainid.network/chains.json) (a.k.a "chainlist") file to get the public RPCs of the chains if no paid provider RPCs are available.
 
 Every `blockscoutApi` entry carries a `proApi` flag. It is `true` when the chain is listed in the [Blockscout PRO API chains config](https://github.com/blockscout/backend-configs/blob/main/pro-api/prod/chains-config.json), which is the list the [PRO API](https://docs.blockscout.com/devs/pro-api) gateway (`api.blockscout.com`) serves. The flag is also set on manual `blockscoutApi` overrides. Not every Blockscout-hosted instance is in that list, so `hostedBy === "blockscout"` alone is not enough to use the PRO API. Entries with `proApi: false` must use the instance `url` directly.
+
+A `hyperSyncApi` entry is set for each included chain that [Envio HyperSync](https://docs.envio.dev/docs/HyperSync/hypersync-supported-networks) serves. The chain list comes from `https://chains.hyperquery.xyz/active_chains` (public, no API key). Only entries with `ecosystem: "evm"` are used:
+
+- A regular entry sets `url` to the numeric alias `https://<chainId>.hypersync.xyz`. The server sends its queries to `<url>/query`.
+- An entry whose name ends with `-traces` (e.g. `eth-traces` for chain `1`) is the trace endpoint of that chain id. It sets the optional `tracesUrl` to `https://<name>.hypersync.xyz`. A `-traces` entry without a regular entry for the same chain id is ignored.
+- Chains listed in [`envio-ignore.json`](#envio-ignorejson) are skipped.
+
+Neither URL has a trailing slash. A `hyperSyncApi` entry in `chain-overrides.json` replaces the generated entry completely, including `tracesUrl`. If the Envio request fails, the run fails after three attempts, like it does for the other sources, and the committed file stays as it is. A chain that Envio stops listing loses its `hyperSyncApi` entry only after the [stability threshold](#stability-filtering-sync-step).
 
 Beyond auto-discovery, chains can also be manually included or excluded:
 
@@ -82,7 +90,7 @@ Allowed fields per entry:
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `sourcifyName`                 | Display name (overrides chainid.network name)                                                                                                                                          |
 | `etherscanApi`                 | Opt into Etherscan-compatible explorer support for a chain not in the Etherscan registry: `{ "supported": true, "url": "<base-url>", "apiKeyEnvName"?: "<ENV>" }`. `apiKeyEnvName` is optional — omit it for explorers that don't require an API key. |
-| `fetchContractCreationTxUsing` | Additional fetch methods (`blockscoutApi`, `avalancheApi`, etc.). A `blockscoutApi` override needs only the `url`; the `proApi` flag is set by the generator.                           |
+| `fetchContractCreationTxUsing` | Additional fetch methods (`blockscoutApi`, `avalancheApi`, `hyperSyncApi`, etc.). A `blockscoutApi` override needs only the `url`; the `proApi` flag is set by the generator. A `hyperSyncApi` override is `{ "url": "<chain-endpoint>", "tracesUrl"?: "<trace-endpoint>" }`; it replaces the generated entry and the generator removes trailing slashes. |
 | `rpc`                          | RPCs defined here have higher priority than auto-discovered provider RPCs                                                                                                              |
 | `hidden`                       | If `true`, the chain is omitted from `GET /chains` and from `GET /v2/contract/all-chains/:address` on the Sourcify server. Verification and explicit per-`chainId` lookups still work. |
 
@@ -131,6 +139,18 @@ Chain IDs the Avalanche Glacier API lists for an unrelated chain — usually an 
 {
   "2201": "Stable Testnet",
   "4114": "Citrea Mainnet"
+}
+```
+
+### `envio-ignore.json`
+
+Chains for which the Envio HyperSync data must not be used. Envio still lists these chains in `active_chains`, but its [supported networks page](https://docs.envio.dev/docs/HyperSync/hypersync-supported-networks) marks them as "indexing halted, historical data only", and `active_chains` does not expose this (they have the same `tier` as live chains). These chains get no generated `fetchContractCreationTxUsing.hyperSyncApi`, but a manual `hyperSyncApi` entry in `chain-overrides.json` still applies. The value is the chain name, for human readers only:
+
+```json
+{
+  "1101": "Polygon zkEVM",
+  "1284": "Moonbeam",
+  "1923": "Swell"
 }
 ```
 
@@ -186,7 +206,8 @@ Example output entry for Ethereum Mainnet:
   "fetchContractCreationTxUsing": {
     "avalancheApi": true,
     "etherscanApi": true,
-    "blockscoutApi": { "url": "https://eth.blockscout.com/", "proApi": true }
+    "blockscoutApi": { "url": "https://eth.blockscout.com/", "proApi": true },
+    "hyperSyncApi": { "url": "https://1.hypersync.xyz", "tracesUrl": "https://eth-traces.hypersync.xyz" }
   },
   "etherscanApi": { "supported": true, "apiKeyEnvName": "ETHERSCAN_API_KEY_MAINNET" },
   "rpc": [

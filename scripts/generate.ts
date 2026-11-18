@@ -11,6 +11,7 @@
  * Blockscout chains hosted by Blockscout (hostedBy === "blockscout").
  * Routescan and third-party Blockscout instances do not qualify a chain for
  * inclusion on their own (used for fetchContractCreationTxUsing only).
+ * The same applies to Envio HyperSync, which only sets `hyperSyncApi`.
  *
  * Every blockscoutApi entry gets `proApi: true` when the chain is in the
  * Blockscout PRO API chains config, else `proApi: false`. Not every
@@ -31,6 +32,8 @@ import type { QuickNodeChainData } from "./providers/quicknode.js";
 import { fetchDrpcChains } from "./providers/drpc.js";
 import type { DrpcChainData } from "./providers/drpc.js";
 import { fetchAvalancheChains } from "./otherAPIs/avalanche.js";
+import { fetchEnvioChains, normalizeHyperSyncApi } from "./otherAPIs/envio.js";
+import type { HyperSyncApi } from "./otherAPIs/envio.js";
 import { fetchEtherscanChains } from "./block-explorers/etherscan.js";
 import type { EtherscanChainData } from "./block-explorers/etherscan.js";
 import { fetchBlockscoutChains, fetchBlockscoutProApiChains } from "./block-explorers/blockscout.js";
@@ -59,6 +62,11 @@ interface ChainEntry {
   rpc: string[];
 }
 
+// Other keys (etherscanApi, blockscoutApi, routescanApi, ...) are not typed.
+type FetchContractCreationTxUsing = Record<string, unknown> & {
+  hyperSyncApi?: HyperSyncApi;
+};
+
 // The SourcifyChainExtension format written into sourcify-chains-default.json
 interface SourcifyChainExtension {
   sourcifyName: string;
@@ -73,7 +81,7 @@ interface SourcifyChainExtension {
     // registry (e.g. https://block-explorer-api.testnet.battlechain.com).
     url?: string;
   };
-  fetchContractCreationTxUsing?: Record<string, unknown>;
+  fetchContractCreationTxUsing?: FetchContractCreationTxUsing;
   rpc?: Array<string | RpcEntry>;
 }
 
@@ -95,7 +103,7 @@ interface RpcEntry {
 interface ChainOverride {
   sourcifyName?: string;
   etherscanApi?: { supported: boolean; apiKeyEnvName?: string; url?: string };
-  fetchContractCreationTxUsing?: Record<string, unknown>;
+  fetchContractCreationTxUsing?: FetchContractCreationTxUsing;
   rpc?: Array<string | RpcEntry>;
 }
 
@@ -209,7 +217,7 @@ async function main() {
   // `--only <id1,id2,...>` (or `--only=<ids>`) restricts the run to the given
   // chain IDs, which must be defined in chain-overrides.json / additional-chains.json.
   // All external provider discovery (QuickNode, dRPC, Etherscan, Blockscout,
-  // Routescan, Avalanche) is skipped — only chainid.network is used for public
+  // Routescan, Avalanche, Envio) is skipped — only chainid.network is used for public
   // RPCs/names — and the output contains ONLY those chains. Used by the
   // test-new-chain CI workflow to build a throwaway config for a brand-new
   // manual chain (which isn't in the committed file yet) without needing
@@ -269,6 +277,13 @@ async function main() {
     );
   }
 
+  // Chains for which the Envio HyperSync data must not be used.
+  const envioIgnore = JSON.parse(fs.readFileSync(path.join(REPO_ROOT, "envio-ignore.json"), "utf8")) as Record<
+    string,
+    string
+  >;
+  const envioIgnoreSet = new Set<number>(Object.keys(envioIgnore).map(Number));
+
   // In --only mode every provider/explorer fetch is skipped; only chainid.network
   // is consulted. All other sources resolve to empty so the candidate-building
   // logic below falls back to the manual config in chain-overrides.json /
@@ -287,6 +302,7 @@ async function main() {
     blockscoutChains,
     blockscoutProApiChains,
     routescanChains,
+    envioChains,
   ] =
     await Promise.all([
       fetchWithRetry("chainid.network", fetchChainList),
@@ -299,6 +315,9 @@ async function main() {
       onlyIds ? Promise.resolve(new Map<number, BlockscoutChainData>()) : fetchWithRetry("Blockscout", fetchBlockscoutChains),
       onlyIds ? Promise.resolve(new Set<number>()) : fetchWithRetrySet("Blockscout PRO API", fetchBlockscoutProApiChains),
       onlyIds ? Promise.resolve(new Map<number, RoutescanChainData>()) : fetchWithRetry("Routescan", fetchRoutescanChains),
+      onlyIds
+        ? Promise.resolve(new Map<number, HyperSyncApi>())
+        : fetchWithRetry("Envio HyperSync", () => fetchEnvioChains(envioIgnoreSet)),
     ]);
 
   // Load source files
@@ -376,8 +395,9 @@ async function main() {
 
   // Auto-supported = union of QuickNode + dRPC + Etherscan +
   // Blockscout chains hosted by Blockscout (hostedBy === "blockscout").
-  // Routescan and third-party Blockscout instances do not qualify for inclusion
-  // on their own — they are only used for fetchContractCreationTxUsing.
+  // Routescan, third-party Blockscout instances and Envio HyperSync do not
+  // qualify for inclusion on their own — they are only used for
+  // fetchContractCreationTxUsing.
   const autoChainIds = new Set<number>();
   for (const chains of [quicknodeChains, drpcChains, etherscanChains]) {
     if (chains) {
@@ -518,7 +538,7 @@ async function main() {
     sourcifyName: string;
     discoveredBy: string[];
     etherscanApi?: { supported: boolean; apiKeyEnvName?: string; url?: string };
-    fetchUsing: Record<string, unknown>;
+    fetchUsing: FetchContractCreationTxUsing;
     rpcSlots: RpcSlot[]; // override + dRPC + QN, in priority order
     publicCandidates: string[]; // chainid.network public RPCs, used only as fallback
   }
@@ -535,6 +555,7 @@ async function main() {
     const etherscan = etherscanChains.get(chainId);
     const blockscout = blockscoutChains.get(chainId);
     const routescan = routescanChains.get(chainId);
+    const envio = envioChains.get(chainId);
 
     // A provider only qualifies as a discovery source if it's not dead.
     // Absent from results (keys not probed — e.g. no API keys) is treated as alive.
@@ -617,7 +638,7 @@ async function main() {
       };
     }
 
-    const fetchUsing: Record<string, unknown> = {
+    const fetchUsing: FetchContractCreationTxUsing = {
       ...(override?.fetchContractCreationTxUsing ?? {}),
     };
     if (etherscan && !fetchUsing["etherscanApi"]) {
@@ -637,6 +658,15 @@ async function main() {
     }
     if (avalancheChains.has(chainId) && !avalancheIgnoreSet.has(chainId) && !fetchUsing["avalancheApi"]) {
       fetchUsing["avalancheApi"] = true;
+    }
+    // A manual hyperSyncApi override replaces the Envio entry.
+    if (fetchUsing.hyperSyncApi) {
+      if (typeof fetchUsing.hyperSyncApi.url !== "string") {
+        throw new Error(`chain-overrides.json: hyperSyncApi of chain ${chainId} has no url`);
+      }
+      fetchUsing.hyperSyncApi = normalizeHyperSyncApi(fetchUsing.hyperSyncApi);
+    } else if (envio) {
+      fetchUsing.hyperSyncApi = envio;
     }
 
     const discoveredBy: string[] = [];

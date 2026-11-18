@@ -867,6 +867,29 @@ describe("buildStabilizedOutput", () => {
     assert.deepEqual(output["1"].fetchContractCreationTxUsing, baseline["1"].fetchContractCreationTxUsing);
   });
 
+  it("hyperSyncApi dropped by Envio for one run → added at once, then held back and restored with tracesUrl", () => {
+    const hyperSyncApi = { url: "https://1.hypersync.xyz", tracesUrl: "https://eth-traces.hypersync.xyz" };
+    const withHyperSync: Snapshot = {
+      "1": chain({ fetchContractCreationTxUsing: { etherscanApi: true, hyperSyncApi } }),
+    };
+    const withoutHyperSync: Snapshot = {
+      "1": chain({ fetchContractCreationTxUsing: { etherscanApi: true } }),
+    };
+
+    const added = diffSnapshots(withoutHyperSync, withHyperSync);
+    assert.equal(added.reductiveChanges.length, 0);
+    assert.ok(added.addDescriptions.some((d) => d.includes("hyperSyncApi")));
+
+    const dropped = diffSnapshots(withHyperSync, withoutHyperSync);
+    assert.deepEqual(
+      dropped.reductiveChanges.map((c) => c.key),
+      ["remove-fetchUsing-1-hyperSyncApi"],
+    );
+    const { updatedHistory } = updateHistory(emptyHistory(), dropped.reductiveChanges, NOW);
+    const output = buildStabilizedOutput(withHyperSync, withoutHyperSync, updatedHistory.pendingChanges);
+    assert.deepEqual(output["1"].fetchContractCreationTxUsing, { etherscanApi: true, hyperSyncApi });
+  });
+
   it("new chain added + pending removal on different chain → addition kept, removal reverted", () => {
     const baseline: Snapshot = { "1": chain() };
     const pending: Record<string, PendingChange> = {

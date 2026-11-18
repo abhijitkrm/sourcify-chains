@@ -36,6 +36,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import type { HyperSyncApi } from "./otherAPIs/envio.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, "..");
@@ -62,7 +63,7 @@ export interface ChainEntry {
   supported: boolean;
   discoveredBy: string[];
   etherscanApi?: { supported: boolean; apiKeyEnvName: string };
-  fetchContractCreationTxUsing?: Record<string, unknown>;
+  fetchContractCreationTxUsing?: Record<string, unknown> & { hyperSyncApi?: HyperSyncApi };
   rpc?: RpcEntry[];
 }
 
