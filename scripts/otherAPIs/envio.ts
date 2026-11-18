@@ -1,43 +1,54 @@
-/** `fetchContractCreationTxUsing.hyperSyncApi` in the output format. */
+/** This is the `fetchContractCreationTxUsing.hyperSyncApi` value in the output file. */
 export interface HyperSyncApi {
-  /** Chain endpoint. The server sends its queries to `${url}/query`. */
+  /** The server sends its queries to `${url}/query`. */
   url: string;
-  /** Trace endpoint. Only some chains have one. */
+  /** Only some chains have a trace endpoint. */
   tracesUrl?: string;
 }
 
 const ENVIO_ACTIVE_CHAINS_URL = "https://chains.hyperquery.xyz/active_chains";
 const TRACES_SUFFIX = "-traces";
 
-/** Removes trailing slashes. The server appends a path to the URL. */
+// The server appends a path to the URL.
 function stripTrailingSlashes(url: string): string {
   return url.replace(/\/+$/, "");
 }
 
 /**
- * Returns a hyperSyncApi entry whose URLs have no trailing slash.
- * Used for manual entries from chain-overrides.json.
+ * Selects the hyperSyncApi entry of a chain.
+ *
+ * - A manual entry from chain-overrides.json replaces the Envio entry.
+ *   The function removes the trailing slashes from its URLs.
+ * - A manual entry without a `url` causes an error.
+ * - A falsy manual entry does not disable the Envio entry.
  */
-export function normalizeHyperSyncApi(api: HyperSyncApi): HyperSyncApi {
+export function resolveHyperSyncApi(
+  chainId: number,
+  override: HyperSyncApi | undefined,
+  envio: HyperSyncApi | undefined,
+): HyperSyncApi | undefined {
+  if (!override) return envio;
+  if (typeof override.url !== "string") {
+    throw new Error(`chain-overrides.json: hyperSyncApi of chain ${chainId} has no url`);
+  }
   return {
-    ...api,
-    url: stripTrailingSlashes(api.url),
-    ...(api.tracesUrl ? { tracesUrl: stripTrailingSlashes(api.tracesUrl) } : {}),
+    ...override,
+    url: stripTrailingSlashes(override.url),
+    ...(override.tracesUrl ? { tracesUrl: stripTrailingSlashes(override.tracesUrl) } : {}),
   };
 }
 
 /**
- * Parses the Envio `active_chains` response into hyperSyncApi entries.
+ * Converts the Envio `active_chains` response into hyperSyncApi entries.
  *
- * - Only `ecosystem: "evm"` entries are used.
- * - An entry whose name ends with `-traces` is the trace endpoint of its chain
- *   id. It sets `tracesUrl` and is not a chain endpoint.
+ * - The function uses only the `ecosystem: "evm"` entries.
+ * - A name that ends with `-traces` identifies the trace endpoint of a chain
+ *   id. This entry sets `tracesUrl`. It is not a chain endpoint.
  * - Each other entry sets `url` to the numeric alias
  *   `https://<chainId>.hypersync.xyz`.
  * - A trace endpoint without a chain endpoint gives no entry.
- * - Chains in `ignoredChainIds` give no entry.
- *
- * When a chain id appears more than once, the first occurrence wins.
+ * - A chain in `ignoredChainIds` gives no entry.
+ * - The first entry wins when a chain id occurs more than one time.
  */
 export function parseEnvioActiveChains(
   data: unknown,
@@ -79,10 +90,8 @@ export function parseEnvioActiveChains(
 }
 
 /**
- * Fetches the chains that Envio HyperSync serves.
- * Used to auto-set fetchContractCreationTxUsing.hyperSyncApi.
- *
- * Throws if the request fails or the response is not a list.
+ * Gets the chains that Envio HyperSync serves.
+ * The function throws an error if the request fails or the response is not an array.
  */
 export async function fetchEnvioChains(
   ignoredChainIds: ReadonlySet<number> = new Set(),

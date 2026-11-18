@@ -11,7 +11,7 @@
  * Blockscout chains hosted by Blockscout (hostedBy === "blockscout").
  * Routescan and third-party Blockscout instances do not qualify a chain for
  * inclusion on their own (used for fetchContractCreationTxUsing only).
- * The same applies to Envio HyperSync, which only sets `hyperSyncApi`.
+ * Envio HyperSync follows the same rule. It only sets `hyperSyncApi`.
  *
  * Every blockscoutApi entry gets `proApi: true` when the chain is in the
  * Blockscout PRO API chains config, else `proApi: false`. Not every
@@ -32,7 +32,7 @@ import type { QuickNodeChainData } from "./providers/quicknode.js";
 import { fetchDrpcChains } from "./providers/drpc.js";
 import type { DrpcChainData } from "./providers/drpc.js";
 import { fetchAvalancheChains } from "./otherAPIs/avalanche.js";
-import { fetchEnvioChains, normalizeHyperSyncApi } from "./otherAPIs/envio.js";
+import { fetchEnvioChains, resolveHyperSyncApi } from "./otherAPIs/envio.js";
 import type { HyperSyncApi } from "./otherAPIs/envio.js";
 import { fetchEtherscanChains } from "./block-explorers/etherscan.js";
 import type { EtherscanChainData } from "./block-explorers/etherscan.js";
@@ -62,7 +62,7 @@ interface ChainEntry {
   rpc: string[];
 }
 
-// Other keys (etherscanApi, blockscoutApi, routescanApi, ...) are not typed.
+// Only `hyperSyncApi` has a type. The other keys are `unknown`.
 type FetchContractCreationTxUsing = Record<string, unknown> & {
   hyperSyncApi?: HyperSyncApi;
 };
@@ -277,7 +277,7 @@ async function main() {
     );
   }
 
-  // Chains for which the Envio HyperSync data must not be used.
+  // The generator does not use the Envio data of these chains.
   const envioIgnore = JSON.parse(fs.readFileSync(path.join(REPO_ROOT, "envio-ignore.json"), "utf8")) as Record<
     string,
     string
@@ -659,14 +659,9 @@ async function main() {
     if (avalancheChains.has(chainId) && !avalancheIgnoreSet.has(chainId) && !fetchUsing["avalancheApi"]) {
       fetchUsing["avalancheApi"] = true;
     }
-    // A manual hyperSyncApi override replaces the Envio entry.
-    if (fetchUsing.hyperSyncApi) {
-      if (typeof fetchUsing.hyperSyncApi.url !== "string") {
-        throw new Error(`chain-overrides.json: hyperSyncApi of chain ${chainId} has no url`);
-      }
-      fetchUsing.hyperSyncApi = normalizeHyperSyncApi(fetchUsing.hyperSyncApi);
-    } else if (envio) {
-      fetchUsing.hyperSyncApi = envio;
+    const hyperSyncApi = resolveHyperSyncApi(chainId, fetchUsing.hyperSyncApi, envio);
+    if (hyperSyncApi) {
+      fetchUsing.hyperSyncApi = hyperSyncApi;
     }
 
     const discoveredBy: string[] = [];

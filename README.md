@@ -44,13 +44,13 @@ Routescan, third-party Blockscout instances and Envio HyperSync do **not** quali
 
 Every `blockscoutApi` entry carries a `proApi` flag. It is `true` when the chain is listed in the [Blockscout PRO API chains config](https://github.com/blockscout/backend-configs/blob/main/pro-api/prod/chains-config.json), which is the list the [PRO API](https://docs.blockscout.com/devs/pro-api) gateway (`api.blockscout.com`) serves. The flag is also set on manual `blockscoutApi` overrides. Not every Blockscout-hosted instance is in that list, so `hostedBy === "blockscout"` alone is not enough to use the PRO API. Entries with `proApi: false` must use the instance `url` directly.
 
-A `hyperSyncApi` entry is set for each included chain that [Envio HyperSync](https://docs.envio.dev/docs/HyperSync/hypersync-supported-networks) serves. The chain list comes from `https://chains.hyperquery.xyz/active_chains` (public, no API key). Only entries with `ecosystem: "evm"` are used:
+A `hyperSyncApi` entry is set for each auto-discovered or `chain-overrides.json` chain that [Envio HyperSync](https://docs.envio.dev/docs/HyperSync/hypersync-supported-networks) serves. The chain list comes from `https://chains.hyperquery.xyz/active_chains` (public, no API key). Only entries with `ecosystem: "evm"` are used:
 
 - A regular entry sets `url` to the numeric alias `https://<chainId>.hypersync.xyz`. The server sends its queries to `<url>/query`.
 - An entry whose name ends with `-traces` (e.g. `eth-traces` for chain `1`) is the trace endpoint of that chain id. It sets the optional `tracesUrl` to `https://<name>.hypersync.xyz`. A `-traces` entry without a regular entry for the same chain id is ignored.
 - Chains listed in [`envio-ignore.json`](#envio-ignorejson) are skipped.
 
-Neither URL has a trailing slash. A `hyperSyncApi` entry in `chain-overrides.json` replaces the generated entry completely, including `tracesUrl`. If the Envio request fails, the run fails after three attempts, like it does for the other sources, and the committed file stays as it is. A chain that Envio stops listing loses its `hyperSyncApi` entry only after the [stability threshold](#stability-filtering-sync-step).
+Neither URL has a trailing slash. A `hyperSyncApi` entry in `chain-overrides.json` replaces the generated entry completely, including `tracesUrl`. If the Envio request fails, the run fails after three attempts, like it does for the other sources, and the committed file stays as it is. A chain that Envio stops listing loses its `hyperSyncApi` entry only after the [stability threshold](#stability-filtering-sync-step). The same threshold holds back a `tracesUrl` that appears or disappears on an existing entry, because that is a value change. Chains from `additional-chains.json` get no `hyperSyncApi` entry (they get no generated `fetchContractCreationTxUsing` data at all, the same as for Routescan). A falsy override (`"hyperSyncApi": false`) does not disable the generated entry — use `envio-ignore.json` for that.
 
 Beyond auto-discovery, chains can also be manually included or excluded:
 
@@ -144,15 +144,23 @@ Chain IDs the Avalanche Glacier API lists for an unrelated chain — usually an 
 
 ### `envio-ignore.json`
 
-Chains for which the Envio HyperSync data must not be used. Envio still lists these chains in `active_chains`, but its [supported networks page](https://docs.envio.dev/docs/HyperSync/hypersync-supported-networks) marks them as "indexing halted, historical data only", and `active_chains` does not expose this (they have the same `tier` as live chains). These chains get no generated `fetchContractCreationTxUsing.hyperSyncApi`, but a manual `hyperSyncApi` entry in `chain-overrides.json` still applies. The value is the chain name, for human readers only:
+Chains for which the Envio HyperSync data must not be used. Envio still lists these chains in `active_chains`, but its data for them does not follow the chain head. `active_chains` does not expose this (these chains have the same `tier` as live chains). The list holds two kinds of chains:
+
+- Chains that Envio's [supported networks page](https://docs.envio.dev/docs/HyperSync/hypersync-supported-networks) marks as "indexing halted, historical data only" (Moonbeam, Polygon zkEVM, Swell).
+- Chains whose HyperSync height is stale although the page does not say so (Sophon). To check a chain, compare `GET https://<chainId>.hypersync.xyz/height` (no token needed) with the chain head (`eth_blockNumber` on an RPC of the chain). The generator does not do this check; the list is maintained by hand.
+
+These chains get no generated `fetchContractCreationTxUsing.hyperSyncApi`, but a manual `hyperSyncApi` entry in `chain-overrides.json` still applies. The value is the chain name, for human readers only:
 
 ```json
 {
   "1101": "Polygon zkEVM",
   "1284": "Moonbeam",
-  "1923": "Swell"
+  "1923": "Swell",
+  "50104": "Sophon"
 }
 ```
+
+An edit to this file takes effect on the next scheduled run: like the other ignore files, `envio-ignore.json` is not in the `paths` trigger of `.github/workflows/generate.yml`. Adding a chain removes its `hyperSyncApi` key, so the [stability threshold](#stability-filtering-sync-step) holds the removal back for 5 consecutive runs. Removing a chain from the list adds the key on the first run.
 
 ### `tx-cache.json`
 

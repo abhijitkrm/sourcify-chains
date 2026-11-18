@@ -1,8 +1,9 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { fetchEnvioChains, normalizeHyperSyncApi, parseEnvioActiveChains } from "./envio.js";
+import { fetchEnvioChains, parseEnvioActiveChains, resolveHyperSyncApi } from "./envio.js";
+import type { HyperSyncApi } from "./envio.js";
 
-// A trimmed-down https://chains.hyperquery.xyz/active_chains response.
+// This is a short version of the https://chains.hyperquery.xyz/active_chains response.
 const response = [
   { name: "arbitrum", tier: "SILVER", chain_id: 42161, ecosystem: "evm" },
   { name: "base-traces", tier: "BRONZE", chain_id: 8453, ecosystem: "evm" },
@@ -94,17 +95,49 @@ describe("fetchEnvioChains", () => {
   });
 });
 
-describe("normalizeHyperSyncApi", () => {
-  it("removes trailing slashes from both URLs", () => {
+describe("resolveHyperSyncApi", () => {
+  const envio: HyperSyncApi = { url: "https://1.hypersync.xyz", tracesUrl: "https://eth-traces.hypersync.xyz" };
+
+  it("applies the Envio entry when there is no override", () => {
+    assert.deepEqual(resolveHyperSyncApi(1, undefined, envio), envio);
+  });
+
+  it("returns nothing when there is no override and no Envio entry", () => {
+    assert.equal(resolveHyperSyncApi(1, undefined, undefined), undefined);
+  });
+
+  it("lets the override win and keeps its tracesUrl", () => {
+    const override = { url: "https://eth.hypersync.xyz", tracesUrl: "https://traces.example" };
+    assert.deepEqual(resolveHyperSyncApi(1, override, envio), override);
+  });
+
+  it("does not add the Envio tracesUrl to an override without one", () => {
+    assert.deepEqual(resolveHyperSyncApi(1, { url: "https://eth.hypersync.xyz" }, envio), {
+      url: "https://eth.hypersync.xyz",
+    });
+  });
+
+  it("removes trailing slashes from both URLs of an override", () => {
     assert.deepEqual(
-      normalizeHyperSyncApi({ url: "https://1.hypersync.xyz/", tracesUrl: "https://eth-traces.hypersync.xyz//" }),
-      { url: "https://1.hypersync.xyz", tracesUrl: "https://eth-traces.hypersync.xyz" },
+      resolveHyperSyncApi(1, { url: "https://eth.hypersync.xyz/", tracesUrl: "https://traces.example//" }, envio),
+      { url: "https://eth.hypersync.xyz", tracesUrl: "https://traces.example" },
     );
   });
 
-  it("leaves clean URLs untouched and adds no tracesUrl", () => {
-    assert.deepEqual(normalizeHyperSyncApi({ url: "https://10.hypersync.xyz" }), {
-      url: "https://10.hypersync.xyz",
+  it("throws with the chain id when an override has no url", () => {
+    const override = { tracesUrl: "https://traces.example" } as unknown as HyperSyncApi;
+    assert.throws(() => resolveHyperSyncApi(1284, override, envio), /hyperSyncApi of chain 1284 has no url/);
+  });
+
+  it("does not let a falsy override disable the Envio entry", () => {
+    assert.deepEqual(resolveHyperSyncApi(1, false as unknown as HyperSyncApi, envio), envio);
+  });
+
+  it("gives an ignored chain no generated entry, but an override still works", () => {
+    const chains = parseEnvioActiveChains(response, new Set([1284]));
+    assert.equal(resolveHyperSyncApi(1284, undefined, chains.get(1284)), undefined);
+    assert.deepEqual(resolveHyperSyncApi(1284, { url: "https://moonbeam.hypersync.xyz/" }, chains.get(1284)), {
+      url: "https://moonbeam.hypersync.xyz",
     });
   });
 });
