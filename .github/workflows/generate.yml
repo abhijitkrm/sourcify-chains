@@ -98,15 +98,19 @@ jobs:
 
       - name: Open PR if ready changes exist
         run: |
-          # Only open a PR when sync produced approved changes (additive or stabilized)
+          # Open a PR when sync produced approved changes (additive or stabilized)
+          # or when a stored explorer chain list changed. The lists have no
+          # stability filter: a failed download stops the run before this step,
+          # so only a complete download replaces a stored list.
           HAS_READY=$(node -e "process.stdout.write(String(require('./sync-status.json').hasReadyChanges))")
-          if [ "$HAS_READY" != "true" ]; then
-            echo "No ready changes — skipping PR"
+          CHANGED_LISTS=$(git status --porcelain -- explorer-chain-lists | awk '{print $2}' | tr '\n' ' ')
+          if [ "$HAS_READY" != "true" ] && [ -z "$CHANGED_LISTS" ]; then
+            echo "No ready changes and no explorer chain list change — skipping PR"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add sourcify-chains-default.json tx-cache.json
+          git add sourcify-chains-default.json tx-cache.json explorer-chain-lists
           if git diff --staged --quiet; then
             echo "No file changes — skipping PR"
             exit 0
@@ -116,6 +120,9 @@ jobs:
           git commit -m "chore: regenerate sourcify-chains-default.json"
           git push origin "$BRANCH" --force
           BODY=$(cat pr-description.txt 2>/dev/null || echo "Automated regeneration by CI. Review chain additions/removals before merging.")
+          if [ -n "$CHANGED_LISTS" ]; then
+            BODY="$BODY"$'\n\n'"Explorer chain lists changed: $CHANGED_LISTS"
+          fi
           EXISTING_PR=$(gh pr list --head "$BRANCH" --base main --state open --json number --jq '.[0].number')
           if [ -n "$EXISTING_PR" ]; then
             gh pr edit "$EXISTING_PR" --body "$BODY"

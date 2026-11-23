@@ -1,3 +1,6 @@
+import { toStoredBlockscoutList } from "./chain-lists.js";
+import type { StoredBlockscoutList } from "./chain-lists.js";
+
 export interface BlockscoutChainData {
   url: string;
   hostedBy: string;
@@ -29,10 +32,14 @@ export function forceHttps(url: string): string {
 /**
  * Fetches the list of chains with Blockscout explorers.
  * The response keys are chain IDs.
+ *
+ * Also returns the list in the form that is stored for the Sourcify server
+ * (see chain-lists.ts).
  */
-export async function fetchBlockscoutChains(): Promise<
-  Map<number, BlockscoutChainData>
-> {
+export async function fetchBlockscoutChains(): Promise<{
+  chains: Map<number, BlockscoutChainData>;
+  storedList: StoredBlockscoutList;
+}> {
   const response = await fetch(BLOCKSCOUT_CHAINS_URL, {
     signal: AbortSignal.timeout(15_000),
   });
@@ -44,6 +51,7 @@ export async function fetchBlockscoutChains(): Promise<
   }
 
   const data = (await response.json()) as BlockscoutResponse;
+  const storedList = toStoredBlockscoutList(data);
   const result = new Map<number, BlockscoutChainData>();
 
   for (const [chainIdStr, entry] of Object.entries(data)) {
@@ -66,7 +74,7 @@ export async function fetchBlockscoutChains(): Promise<
 
   console.log(`Blockscout: ${result.size} chains, ${Array.from(result.values()).filter(c => c.hostedBy === "blockscout").length} hosted by Blockscout`);
 
-  return result;
+  return { chains: result, storedList };
 }
 
 // Chains served by the Blockscout PRO API gateway (api.blockscout.com).

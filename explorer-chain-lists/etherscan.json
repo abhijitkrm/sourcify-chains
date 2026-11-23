@@ -1,0 +1,389 @@
+{
+  "result": [
+    {
+      "chainname": "Ethereum Mainnet",
+      "chainid": "1",
+      "blockexplorer": "https://etherscan.io/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=1",
+      "status": 1
+    },
+    {
+      "chainname": "OP Mainnet",
+      "chainid": "10",
+      "blockexplorer": "https://optimistic.etherscan.io/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=10",
+      "status": 1
+    },
+    {
+      "chainname": "XDC Mainnet",
+      "chainid": "50",
+      "blockexplorer": "https://xdcscan.com/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=50",
+      "status": 1
+    },
+    {
+      "chainname": "XDC Apothem Testnet",
+      "chainid": "51",
+      "blockexplorer": "https://testnet.xdcscan.com/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=51",
+      "status": 1
+    },
+    {
+      "chainname": "BNB Smart Chain Mainnet",
+      "chainid": "56",
+      "blockexplorer": "https://bscscan.com/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=56",
+      "status": 1
+    },
+    {
+      "chainname": "BNB Smart Chain Testnet",
+      "chainid": "97",
+      "blockexplorer": "https://testnet.bscscan.com/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=97",
+      "status": 1
+    },
+    {
+      "chainname": "Gnosis",
+      "chainid": "100",
+      "blockexplorer": "https://gnosisscan.io/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=100",
+      "status": 1
+    },
+    {
+      "chainname": "Unichain Mainnet",
+      "chainid": "130",
+      "blockexplorer": "https://uniscan.xyz/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=130",
+      "status": 1
+    },
+    {
+      "chainname": "Polygon Mainnet",
+      "chainid": "137",
+      "blockexplorer": "https://polygonscan.com/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=137",
+      "status": 1
+    },
+    {
+      "chainname": "Monad Mainnet",
+      "chainid": "143",
+      "blockexplorer": "https://monadscan.com/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=143",
+      "status": 1
+    },
+    {
+      "chainname": "Sonic Mainnet",
+      "chainid": "146",
+      "blockexplorer": "https://sonicscan.org/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=146",
+      "status": 1
+    },
+    {
+      "chainname": "BitTorrent Chain Mainnet",
+      "chainid": "199",
+      "blockexplorer": "https://bttcscan.com/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=199",
+      "status": 1
+    },
+    {
+      "chainname": "Fraxtal Mainnet",
+      "chainid": "252",
+      "blockexplorer": "https://fraxscan.com/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=252",
+      "status": 1
+    },
+    {
+      "chainname": "World Mainnet",
+      "chainid": "480",
+      "blockexplorer": "https://worldscan.org/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=480",
+      "status": 1
+    },
+    {
+      "chainname": "Stable Mainnet",
+      "chainid": "988",
+      "blockexplorer": "https://stablescan.xyz/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=988",
+      "status": 1
+    },
+    {
+      "chainname": "HyperEVM Mainnet",
+      "chainid": "999",
+      "blockexplorer": "https://hyperevmscan.io/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=999",
+      "status": 1
+    },
+    {
+      "chainname": "BitTorrent Chain Testnet",
+      "chainid": "1029",
+      "blockexplorer": "https://testnet.bttcscan.com/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=1029",
+      "status": 1
+    },
+    {
+      "chainname": "Unichain Sepolia Testnet",
+      "chainid": "1301",
+      "blockexplorer": "https://sepolia.uniscan.xyz/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=1301",
+      "status": 1
+    },
+    {
+      "chainname": "Sei Testnet",
+      "chainid": "1328",
+      "blockexplorer": "https://testnet.seiscan.io/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=1328",
+      "status": 1
+    },
+    {
+      "chainname": "Sei Mainnet",
+      "chainid": "1329",
+      "blockexplorer": "https://seiscan.io/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=1329",
+      "status": 1
+    },
+    {
+      "chainname": "Stable Testnet",
+      "chainid": "2201",
+      "blockexplorer": "https://testnet.stablescan.xyz/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=2201",
+      "status": 1
+    },
+    {
+      "chainname": "Fraxtal Hoodi Testnet",
+      "chainid": "2523",
+      "blockexplorer": "https://hoodi.fraxscan.com/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=2523",
+      "status": 1
+    },
+    {
+      "chainname": "Abstract Mainnet",
+      "chainid": "2741",
+      "blockexplorer": "https://abscan.org/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=2741",
+      "status": 1
+    },
+    {
+      "chainname": "MegaETH Mainnet",
+      "chainid": "4326",
+      "blockexplorer": "https://mega.etherscan.io/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=4326",
+      "status": 1
+    },
+    {
+      "chainname": "Memecore Mainnet",
+      "chainid": "4352",
+      "blockexplorer": "https://memecorescan.io/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=4352",
+      "status": 1
+    },
+    {
+      "chainname": "Robinhood Chain",
+      "chainid": "4663",
+      "blockexplorer": "https://robin.etherscan.io/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=4663",
+      "status": 1
+    },
+    {
+      "chainname": "World Sepolia Testnet",
+      "chainid": "4801",
+      "blockexplorer": "https://sepolia.worldscan.org/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=4801",
+      "status": 1
+    },
+    {
+      "chainname": "Mantle Mainnet",
+      "chainid": "5000",
+      "blockexplorer": "https://mantlescan.xyz/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=5000",
+      "status": 1
+    },
+    {
+      "chainname": "Mantle Sepolia Testnet",
+      "chainid": "5003",
+      "blockexplorer": "https://sepolia.mantlescan.xyz/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=5003",
+      "status": 1
+    },
+    {
+      "chainname": "Arc Mainnet",
+      "chainid": "5042",
+      "blockexplorer": "https://arc.etherscan.io/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=5042",
+      "status": 1
+    },
+    {
+      "chainname": "MegaETH Testnet",
+      "chainid": "6343",
+      "blockexplorer": "https://testnet-mega.etherscan.io/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=6343",
+      "status": 1
+    },
+    {
+      "chainname": "Base Mainnet",
+      "chainid": "8453",
+      "blockexplorer": "https://basescan.org/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=8453",
+      "status": 1
+    },
+    {
+      "chainname": "Plasma Mainnet",
+      "chainid": "9745",
+      "blockexplorer": "https://plasmascan.to/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=9745",
+      "status": 1
+    },
+    {
+      "chainname": "Plasma Testnet",
+      "chainid": "9746",
+      "blockexplorer": "https://testnet.plasmascan.to/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=9746",
+      "status": 1
+    },
+    {
+      "chainname": "Monad Testnet",
+      "chainid": "10143",
+      "blockexplorer": "https://testnet.monadscan.com/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=10143",
+      "status": 1
+    },
+    {
+      "chainname": "Sonic Testnet",
+      "chainid": "14601",
+      "blockexplorer": "https://testnet.sonicscan.org/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=14601",
+      "status": 1
+    },
+    {
+      "chainname": "Arbitrum One Mainnet",
+      "chainid": "42161",
+      "blockexplorer": "https://arbiscan.io/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=42161",
+      "status": 1
+    },
+    {
+      "chainname": "Celo Mainnet",
+      "chainid": "42220",
+      "blockexplorer": "https://celoscan.io/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=42220",
+      "status": 1
+    },
+    {
+      "chainname": "Avalanche C-Chain",
+      "chainid": "43114",
+      "blockexplorer": "https://snowscan.xyz/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=43114",
+      "status": 1
+    },
+    {
+      "chainname": "Memecore Insectarium Testnet",
+      "chainid": "43522",
+      "blockexplorer": "https://testnet.memecorescan.io/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=43522",
+      "status": 1
+    },
+    {
+      "chainname": "Linea Sepolia Testnet",
+      "chainid": "59141",
+      "blockexplorer": "https://sepolia.lineascan.build/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=59141",
+      "status": 1
+    },
+    {
+      "chainname": "Linea Mainnet",
+      "chainid": "59144",
+      "blockexplorer": "https://lineascan.build/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=59144",
+      "status": 1
+    },
+    {
+      "chainname": "Polygon Amoy Testnet",
+      "chainid": "80002",
+      "blockexplorer": "https://amoy.polygonscan.com/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=80002",
+      "status": 1
+    },
+    {
+      "chainname": "Berachain Bepolia Testnet",
+      "chainid": "80069",
+      "blockexplorer": "https://testnet.berascan.com/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=80069",
+      "status": 1
+    },
+    {
+      "chainname": "Berachain Mainnet",
+      "chainid": "80094",
+      "blockexplorer": "https://berascan.com/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=80094",
+      "status": 1
+    },
+    {
+      "chainname": "Base Sepolia Testnet",
+      "chainid": "84532",
+      "blockexplorer": "https://sepolia.basescan.org/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=84532",
+      "status": 1
+    },
+    {
+      "chainname": "Taiko Mainnet",
+      "chainid": "167000",
+      "blockexplorer": "https://taikoscan.io/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=167000",
+      "status": 1
+    },
+    {
+      "chainname": "Taiko Hoodi",
+      "chainid": "167013",
+      "blockexplorer": "https://hoodi.taikoscan.io/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=167013",
+      "status": 1
+    },
+    {
+      "chainname": "Arbitrum Sepolia Testnet",
+      "chainid": "421614",
+      "blockexplorer": "https://sepolia.arbiscan.io/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=421614",
+      "status": 1
+    },
+    {
+      "chainname": "Hoodi Testnet",
+      "chainid": "560048",
+      "blockexplorer": "https://hoodi.etherscan.io/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=560048",
+      "status": 1
+    },
+    {
+      "chainname": "Katana Bokuto",
+      "chainid": "737373",
+      "blockexplorer": "https://bokuto.katanascan.com/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=737373",
+      "status": 1
+    },
+    {
+      "chainname": "Katana Mainnet",
+      "chainid": "747474",
+      "blockexplorer": "https://katanascan.com/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=747474",
+      "status": 1
+    },
+    {
+      "chainname": "Celo Sepolia Testnet",
+      "chainid": "11142220",
+      "blockexplorer": "https://sepolia.celoscan.io/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=11142220",
+      "status": 1
+    },
+    {
+      "chainname": "Sepolia Testnet",
+      "chainid": "11155111",
+      "blockexplorer": "https://sepolia.etherscan.io/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=11155111",
+      "status": 1
+    },
+    {
+      "chainname": "OP Sepolia Testnet",
+      "chainid": "11155420",
+      "blockexplorer": "https://sepolia-optimism.etherscan.io/",
+      "apiurl": "https://api.etherscan.io/v2/api?chainid=11155420",
+      "status": 1
+    }
+  ]
+}

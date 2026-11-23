@@ -37,6 +37,8 @@ import { fetchBlockscoutChains, fetchBlockscoutProApiChains } from "./block-expl
 import type { BlockscoutChainData } from "./block-explorers/blockscout.js";
 import { fetchRoutescanChains } from "./block-explorers/routescan.js";
 import type { RoutescanChainData } from "./block-explorers/routescan.js";
+import { writeExplorerChainLists } from "./block-explorers/chain-lists.js";
+import type { ExplorerChainLists } from "./block-explorers/chain-lists.js";
 import { probeChain, withConcurrency, checkLiveness, fetchReportedChainId } from "./probe.js";
 import type { TraceCacheValue, ProbeChainResult } from "./probe.js";
 import fs from "fs";
@@ -278,6 +280,10 @@ async function main() {
       ? "Fetching chainid.network only (--only mode)..."
       : "Fetching chain list and provider/explorer data in parallel...",
   );
+  // The explorer chain lists that are stored for the Sourcify server. The
+  // downloads below fill them, and they are written at the end of the run.
+  const explorerChainLists: ExplorerChainLists = {};
+
   const [
     chainList,
     quicknodeChains,
@@ -295,10 +301,29 @@ async function main() {
         : fetchWithRetry("QuickNode", () => fetchQuickNodeChains(quicknodeApiKey, resolveQuickNodeChainId, console.log)),
       onlyIds ? Promise.resolve(new Map<number, DrpcChainData>()) : fetchWithRetry("dRPC", fetchDrpcChains),
       onlyIds ? Promise.resolve(new Set<number>()) : fetchWithRetrySet("Avalanche", fetchAvalancheChains),
-      onlyIds ? Promise.resolve(new Map<number, EtherscanChainData>()) : fetchWithRetry("Etherscan", fetchEtherscanChains),
-      onlyIds ? Promise.resolve(new Map<number, BlockscoutChainData>()) : fetchWithRetry("Blockscout", fetchBlockscoutChains),
+      onlyIds
+        ? Promise.resolve(new Map<number, EtherscanChainData>())
+        : fetchWithRetry("Etherscan", async () => {
+            const { chains, storedList } = await fetchEtherscanChains();
+            explorerChainLists.etherscan = storedList;
+            return chains;
+          }),
+      onlyIds
+        ? Promise.resolve(new Map<number, BlockscoutChainData>())
+        : fetchWithRetry("Blockscout", async () => {
+            const { chains, storedList } = await fetchBlockscoutChains();
+            explorerChainLists.blockscout = storedList;
+            return chains;
+          }),
       onlyIds ? Promise.resolve(new Set<number>()) : fetchWithRetrySet("Blockscout PRO API", fetchBlockscoutProApiChains),
-      onlyIds ? Promise.resolve(new Map<number, RoutescanChainData>()) : fetchWithRetry("Routescan", fetchRoutescanChains),
+      onlyIds
+        ? Promise.resolve(new Map<number, RoutescanChainData>())
+        : fetchWithRetry("Routescan", async () => {
+            const { chains, storedMainnetList, storedTestnetList } = await fetchRoutescanChains();
+            explorerChainLists.routescanMainnet = storedMainnetList;
+            explorerChainLists.routescanTestnet = storedTestnetList;
+            return chains;
+          }),
     ]);
 
   // Load source files
@@ -855,6 +880,12 @@ async function main() {
         console.warn(`  #${chainId} ${name} — ${source} RPC serves ${reportedChainId} (excluded)`);
       }
     }
+  }
+
+  // Store the explorer chain lists for the Sourcify server. Skipped in --only
+  // mode, which does not download them.
+  if (!onlyIds) {
+    writeExplorerChainLists(path.join(REPO_ROOT, "explorer-chain-lists"), explorerChainLists);
   }
 
   const outputPath = path.join(REPO_ROOT, "sourcify-chains-default.json");

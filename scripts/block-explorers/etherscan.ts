@@ -1,3 +1,6 @@
+import { toStoredEtherscanList } from "./chain-lists.js";
+import type { StoredEtherscanList } from "./chain-lists.js";
+
 export interface EtherscanChainData {
   apiUrl: string;
   chainName: string;
@@ -22,10 +25,14 @@ const ETHERSCAN_CHAINLIST_URL = "https://api.etherscan.io/v2/chainlist";
 /**
  * Fetches the list of chains supported by Etherscan's unified v2 API.
  * Filters to only active chains (status === 1).
+ *
+ * Also returns the list in the form that is stored for the Sourcify server
+ * (see chain-lists.ts).
  */
-export async function fetchEtherscanChains(): Promise<
-  Map<number, EtherscanChainData>
-> {
+export async function fetchEtherscanChains(): Promise<{
+  chains: Map<number, EtherscanChainData>;
+  storedList: StoredEtherscanList;
+}> {
   const response = await fetch(ETHERSCAN_CHAINLIST_URL, {
     signal: AbortSignal.timeout(15_000),
   });
@@ -37,6 +44,7 @@ export async function fetchEtherscanChains(): Promise<
   }
 
   const data = (await response.json()) as EtherscanResponse;
+  const storedList = toStoredEtherscanList(data);
   const result = new Map<number, EtherscanChainData>();
 
   for (const entry of data.result) {
@@ -57,5 +65,5 @@ export async function fetchEtherscanChains(): Promise<
     });
   }
 
-  return result;
+  return { chains: result, storedList };
 }

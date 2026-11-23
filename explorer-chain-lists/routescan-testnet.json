@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "chainId": "43113",
+      "evmChainId": "43113"
+    },
+    {
+      "chainId": "560048",
+      "evmChainId": "560048"
+    },
+    {
+      "chainId": "743111",
+      "evmChainId": "743111"
+    },
+    {
+      "chainId": "11155111",
+      "evmChainId": "11155111"
+    }
+  ]
+}

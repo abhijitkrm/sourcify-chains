@@ -1,3 +1,6 @@
+import { toStoredRoutescanList } from "./chain-lists.js";
+import type { StoredRoutescanList } from "./chain-lists.js";
+
 export interface RoutescanChainData {
   type: "mainnet" | "testnet";
 }
@@ -35,11 +38,16 @@ const TESTNET_BLOCKCHAINS_URL =
  *   testnet blockchain lists. Chains not found in either list are omitted
  *   because without a type we cannot construct the correct API URL.
  *
+ * Also returns the mainnet and testnet lists in the form that is stored for
+ * the Sourcify server (see chain-lists.ts).
+ *
  * Throws if any of the three requests fail.
  */
-export async function fetchRoutescanChains(): Promise<
-  Map<number, RoutescanChainData>
-> {
+export async function fetchRoutescanChains(): Promise<{
+  chains: Map<number, RoutescanChainData>;
+  storedMainnetList: StoredRoutescanList;
+  storedTestnetList: StoredRoutescanList;
+}> {
   const [vanityRes, mainnetRes, testnetRes] = await Promise.all([
     fetch(VANITY_URLS_URL, { signal: AbortSignal.timeout(15_000) }),
     fetch(MAINNET_BLOCKCHAINS_URL, { signal: AbortSignal.timeout(15_000) }),
@@ -65,6 +73,8 @@ export async function fetchRoutescanChains(): Promise<
   const vanityData = (await vanityRes.json()) as VanityUrlResponse;
   const mainnetData = (await mainnetRes.json()) as BlockchainsResponse;
   const testnetData = (await testnetRes.json()) as BlockchainsResponse;
+  const storedMainnetList = toStoredRoutescanList(mainnetData);
+  const storedTestnetList = toStoredRoutescanList(testnetData);
 
   // Build type lookup: mainnet takes precedence if a chain appears in both lists
   const typeMap = new Map<number, "mainnet" | "testnet">();
@@ -94,5 +104,5 @@ export async function fetchRoutescanChains(): Promise<
     }
   }
 
-  return result;
+  return { chains: result, storedMainnetList, storedTestnetList };
 }

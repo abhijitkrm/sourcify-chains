@@ -10,6 +10,7 @@ Canonical chain configuration for [Sourcify](https://sourcify.dev) — the open-
 2. **Probes each QuickNode and dRPC chain** to verify it is alive and detect trace support (see below)
 3. Merges with manually maintained config files in this repo
 4. Writes the merged result to `sourcify-chains-default.json`
+5. Stores the chain lists of Etherscan, Blockscout and Routescan in [`explorer-chain-lists/`](./explorer-chain-lists) (see [Explorer chain lists](#explorer-chain-lists))
 
 A chain is **auto-included** if it appears in any of:
 
@@ -197,6 +198,23 @@ Example output entry for Ethereum Mainnet:
 }
 ```
 
+## Explorer chain lists
+
+The Sourcify server submits each verified contract to Etherscan, Blockscout and Routescan. For that it needs the chain list of each explorer: on which chains the explorer works and at which URL. The server reads these lists from this repository at startup, not from the explorers. If an explorer returns a broken list, the server is not affected ([argotorg/sourcify#3081](https://github.com/argotorg/sourcify/issues/3081)).
+
+**Do not edit these files directly.** The generation writes them from the same downloads that it uses for `sourcify-chains-default.json`:
+
+| File                                          | Source                                                            |
+| --------------------------------------------- | ----------------------------------------------------------------- |
+| `explorer-chain-lists/etherscan.json`         | `https://api.etherscan.io/v2/chainlist`                           |
+| `explorer-chain-lists/blockscout.json`        | `https://chains.blockscout.com/api/chains`                        |
+| `explorer-chain-lists/routescan-mainnet.json` | `https://api.routescan.io/v2/network/mainnet/evm/all/blockchains` |
+| `explorer-chain-lists/routescan-testnet.json` | `https://api.routescan.io/v2/network/testnet/evm/all/blockchains` |
+
+Each file has the shape of the explorer's response, reduced to the fields that the server reads, plus the chain name for review. Logos, descriptions and other fields are left out, and the entries are sorted by chain ID, so a change of a list gives a small diff. The Blockscout file keeps only the keys that are chain IDs. The reduction is in `scripts/block-explorers/chain-lists.ts`.
+
+The lists are not limited to the chains in `sourcify-chains-default.json`, and they do not go through the stability filter. Their protection is different: if a download fails, or a response has the wrong shape or no usable entry, the generation stops and all stored lists stay as they are. A list is only replaced by a complete download, and the change is visible in the regenerate PR.
+
 ## RPC priority order
 
 For each chain, the generator builds the RPC list in this priority order:
@@ -264,10 +282,19 @@ An RPC that was removed from `chain-overrides.json` by hand is not an API flake,
 
 ## Distribution
 
-After each merge to `main` that changes `sourcify-chains-default.json`, the release workflow (`.github/workflows/release.yml`) uploads the file to Google Cloud Storage. The canonical fetch URL for Sourcify consumers is:
+After each merge to `main` that changes `sourcify-chains-default.json` or a file in `explorer-chain-lists/`, the release workflow (`.github/workflows/release.yml`) uploads these files to Google Cloud Storage. The canonical fetch URL for Sourcify consumers is:
 
 ```
 https://storage.googleapis.com/sourcifyeth-chains/sourcify-chains-default.json
+```
+
+The explorer chain lists are next to it:
+
+```
+https://storage.googleapis.com/sourcifyeth-chains/explorer-chain-lists/etherscan.json
+https://storage.googleapis.com/sourcifyeth-chains/explorer-chain-lists/blockscout.json
+https://storage.googleapis.com/sourcifyeth-chains/explorer-chain-lists/routescan-mainnet.json
+https://storage.googleapis.com/sourcifyeth-chains/explorer-chain-lists/routescan-testnet.json
 ```
 
 The GitHub raw URL (`https://raw.githubusercontent.com/sourcifyeth/sourcify-chains/main/sourcify-chains-default.json`) remains available as a fallback but GCS is preferred for uptime.
@@ -282,7 +309,7 @@ The generation workflow (`.github/workflows/generate.yml`) runs:
 - **Twice daily** at 02:00 and 14:00 UTC (to pick up new chains from provider APIs and accumulate stability-filter counts)
 - **Manually** via `workflow_dispatch`
 
-If `sourcify-chains-default.json` or `tx-cache.json` changes after stability filtering, the bot opens a PR from a fixed branch `chore/regenerate-chains` targeting `main`. If a PR for that branch is already open, it force-pushes the update to it instead of opening a new one. The PR body is generated from `pr-description.txt` and lists immediately included changes, newly stabilised removals, and still-pending changes. The PR must be reviewed and merged manually.
+If `sourcify-chains-default.json` or `tx-cache.json` changes after stability filtering, or a file in `explorer-chain-lists/` changes, the bot opens a PR from a fixed branch `chore/regenerate-chains` targeting `main`. If a PR for that branch is already open, it force-pushes the update to it instead of opening a new one. The PR body is generated from `pr-description.txt` and lists immediately included changes, newly stabilised removals, and still-pending changes. The PR must be reviewed and merged manually.
 
 Required secrets:
 

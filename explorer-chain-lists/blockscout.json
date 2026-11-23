@@ -1,0 +1,4938 @@
+{
+  "1": {
+    "name": "Ethereum",
+    "explorers": [
+      {
+        "url": "https://eth.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "7": {
+    "name": "Thai Chain",
+    "explorers": [
+      {
+        "url": "https://thaichain.org",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "10": {
+    "name": "OP Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.optimism.io/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "14": {
+    "name": "Flare Networks",
+    "explorers": [
+      {
+        "url": "https://flare-explorer.flare.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "15": {
+    "name": "Flare Network Coston",
+    "explorers": [
+      {
+        "url": "https://coston-explorer.flare.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "19": {
+    "name": "Flare Network Songbird Canary",
+    "explorers": [
+      {
+        "url": "https://songbird-explorer.flare.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "23": {
+    "name": "Kardiachain",
+    "explorers": [
+      {
+        "url": "https://explorer.kardiachain.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "24": {
+    "name": "Cronos",
+    "explorers": [
+      {
+        "url": "https://cronos.org/explorer/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "27": {
+    "name": "CaoTianChain",
+    "explorers": [
+      {
+        "url": "https://browser.ctblock.cn/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "30": {
+    "name": "Rootstock",
+    "explorers": [
+      {
+        "url": "https://rootstock.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "31": {
+    "name": "Rootstock Testnet",
+    "explorers": [
+      {
+        "url": "https://rootstock-testnet.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "38": {
+    "name": "U2U Network",
+    "explorers": [
+      {
+        "url": "https://u2uscan.xyz",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "40": {
+    "name": "Telos EVM",
+    "explorers": [
+      {
+        "url": "https://telostx.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "42": {
+    "name": "LUKSO",
+    "explorers": [
+      {
+        "url": "https://explorer.execution.mainnet.lukso.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "44": {
+    "name": "Crab",
+    "explorers": [
+      {
+        "url": "https://crab-scan.darwinia.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "46": {
+    "name": "Darwinia",
+    "explorers": [
+      {
+        "url": "https://explorer.darwinia.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "54": {
+    "name": "ZYX Network",
+    "explorers": [
+      {
+        "url": "https://zyxscan.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "57": {
+    "name": "Syscoin",
+    "explorers": [
+      {
+        "url": "https://explorer.syscoin.org",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "61": {
+    "name": "Ethereum Classic",
+    "explorers": [
+      {
+        "url": "https://etc.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "63": {
+    "name": "Ethereum Classic Mordor",
+    "explorers": [
+      {
+        "url": "https://etc-mordor.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "73": {
+    "name": "IDChain",
+    "explorers": [
+      {
+        "url": "https://explorer.idchain.one/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "81": {
+    "name": "Astar Shibuya",
+    "explorers": [
+      {
+        "url": "https://shibuya.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "96": {
+    "name": "Bitkub",
+    "explorers": [
+      {
+        "url": "https://www.kubscan.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "100": {
+    "name": "Gnosis",
+    "explorers": [
+      {
+        "url": "https://gnosisscan.io/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "102": {
+    "name": "Worldland",
+    "explorers": [
+      {
+        "url": "https://scan.worldland.foundation",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "105": {
+    "name": "Stratis",
+    "explorers": [
+      {
+        "url": "https://explorer.stratisevm.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "109": {
+    "name": "Shibarium",
+    "explorers": [
+      {
+        "url": "https://shibariumscan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "111": {
+    "name": "BOB Testnet",
+    "explorers": [
+      {
+        "url": "https://bob-sepolia.explorer.gobob.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "114": {
+    "name": "Flare Network Coston2",
+    "explorers": [
+      {
+        "url": "https://coston2-explorer.flare.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "122": {
+    "name": "Fuse",
+    "explorers": [
+      {
+        "url": "https://explorer.fuse.io/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "123": {
+    "name": "Fuse Sparknet",
+    "explorers": [
+      {
+        "url": "https://explorer.fusespark.io/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "130": {
+    "name": "Unichain",
+    "explorers": [
+      {
+        "url": "https://unichain.blockscout.com",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "132": {
+    "name": "iExec",
+    "explorers": [
+      {
+        "url": "https://blockscout.bellecour.iex.ec/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "133": {
+    "name": "HashKey Chain Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet-explorer.hsk.xyz/",
+        "hostedBy": "altlayer-raas"
+      }
+    ]
+  },
+  "137": {
+    "name": "Polygon PoS",
+    "explorers": [
+      {
+        "url": "https://polygon.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "138": {
+    "name": "DeFi Oracle Meta Mainnet",
+    "explorers": [
+      {
+        "url": "https://blockscout.defi-oracle.io",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "140": {
+    "name": "Data Lake Chain",
+    "explorers": [
+      {
+        "url": "https://explorer.data-lake.co/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "151": {
+    "name": "Enzoscan chain",
+    "explorers": [
+      {
+        "url": "https://enzoscan.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "157": {
+    "name": "Shibarium Puppynet",
+    "explorers": [
+      {
+        "url": "https://puppyscan.shib.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "165": {
+    "name": "Farm Chain",
+    "explorers": [
+      {
+        "url": "https://fmcscan.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "169": {
+    "name": "Manta Pacific",
+    "explorers": [
+      {
+        "url": "https://pacific-explorer.manta.network/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "177": {
+    "name": "HashKey",
+    "explorers": [
+      {
+        "url": "https://hsk.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "178": {
+    "name": "Abey Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet.abeyscan.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "179": {
+    "name": "Abey Mainnet",
+    "explorers": [
+      {
+        "url": "https://abeyscan.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "185": {
+    "name": "Mint Chain",
+    "explorers": [
+      {
+        "url": "https://explorer.mintchain.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "205": {
+    "name": "Stratis Auroria Testnet",
+    "explorers": [
+      {
+        "url": "https://auroria.explorer.stratisevm.com",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "213": {
+    "name": "Energy Web",
+    "explorers": [
+      {
+        "url": "https://explorer.energyweb.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "215": {
+    "name": "IDN Network",
+    "explorers": [
+      {
+        "url": "https://scan.idn-network.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "216": {
+    "name": "HappyChain Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.testnet.happy.tech/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "225": {
+    "name": "Swan Chain",
+    "explorers": [
+      {
+        "url": "https://mainnet-explorer.swanchain.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "227": {
+    "name": "Prom Mainnet",
+    "explorers": [
+      {
+        "url": "https://promscan.io/",
+        "hostedBy": "gateway"
+      }
+    ]
+  },
+  "228": {
+    "name": "Mind Network",
+    "explorers": [
+      {
+        "url": "https://explorer.mindnetwork.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "229": {
+    "name": "Paxeer Network",
+    "explorers": [
+      {
+        "url": "https://paxscan.paxeer.app",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "231": {
+    "name": "BPX Chain",
+    "explorers": [
+      {
+        "url": "https://explorer.mainnet.bpxchain.cc/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "239": {
+    "name": "TAC Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.tac.build/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "248": {
+    "name": "Oasys",
+    "explorers": [
+      {
+        "url": "https://explorer.oasys.games/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "255": {
+    "name": "Kroma",
+    "explorers": [
+      {
+        "url": "https://blockscout.kroma.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "267": {
+    "name": "Neura Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet-blockscout.infra.neuraprotocol.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "273": {
+    "name": "XR1",
+    "explorers": [
+      {
+        "url": "https://xr1.calderaexplorer.xyz/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "277": {
+    "name": "Ozone Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet.ozonescan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "291": {
+    "name": "Orderly",
+    "explorers": [
+      {
+        "url": "https://explorer.orderly.network/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "300": {
+    "name": "ZKsync Era Sepolia Testnet",
+    "explorers": [
+      {
+        "url": "https://zksync-sepolia.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "311": {
+    "name": "OMAX",
+    "explorers": [
+      {
+        "url": "https://omaxscan.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "313": {
+    "name": "NeurochainAI",
+    "explorers": [
+      {
+        "url": "https://ncnscan.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "314": {
+    "name": "Filecoin Virtual Machine",
+    "explorers": [
+      {
+        "url": "https://filecoin.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "324": {
+    "name": "ZKsync Era",
+    "explorers": [
+      {
+        "url": "https://zksync.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "332": {
+    "name": "OMAX",
+    "explorers": [
+      {
+        "url": "https://omaxscan.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "356": {
+    "name": "Acala",
+    "explorers": [
+      {
+        "url": "https://blockscout.acala.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "360": {
+    "name": "Shape",
+    "explorers": [
+      {
+        "url": "https://shapescan.xyz/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "369": {
+    "name": "PulseChain",
+    "explorers": [
+      {
+        "url": "https://scan.pulsechain.box/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "395": {
+    "name": "CamDL Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.testnet.camdl.gov.kh/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "414": {
+    "name": "Flynet",
+    "explorers": [
+      {
+        "url": "https://explorer.flynet.org/",
+        "hostedBy": "conduit"
+      }
+    ]
+  },
+  "416": {
+    "name": "SX Network",
+    "explorers": [
+      {
+        "url": "https://explorer.sx.technology/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "432": {
+    "name": "Converge Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer-converge-mainnet.t.conduit.xyz/",
+        "hostedBy": "conduit"
+      }
+    ]
+  },
+  "466": {
+    "name": "AppChain Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.appchain.xyz/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "480": {
+    "name": "World Chain",
+    "explorers": [
+      {
+        "url": "https://worldchain-mainnet.explorer.alchemy.com",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "484": {
+    "name": "Camp Network",
+    "explorers": [
+      {
+        "url": "https://camp.cloud.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "488": {
+    "name": "BXN",
+    "explorers": [
+      {
+        "url": "https://blackfortscan.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "545": {
+    "name": "Flow Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet.evm.flow.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "546": {
+    "name": "Doric",
+    "explorers": [
+      {
+        "url": "https://explorer.doric.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "550": {
+    "name": "Towns Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.towns.com/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "568": {
+    "name": "Dogechain Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer-testnet.dogechain.dog/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "570": {
+    "name": "Rollux",
+    "explorers": [
+      {
+        "url": "https://explorer.rollux.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "592": {
+    "name": "Astar",
+    "explorers": [
+      {
+        "url": "https://astar.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "597": {
+    "name": "Milkomeda",
+    "explorers": [
+      {
+        "url": "https://explorer-mainnet-cardano-evm.c1.milkomeda.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "633": {
+    "name": "Exosama",
+    "explorers": [
+      {
+        "url": "https://explorer.exosama.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "648": {
+    "name": "Endurance",
+    "explorers": [
+      {
+        "url": "https://explorer-endurance.fusionist.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "677": {
+    "name": "BOT Chain Mainnet",
+    "explorers": [
+      {
+        "url": "https://scan.botchain.ai/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "714": {
+    "name": "Eden",
+    "explorers": [
+      {
+        "url": "https://eden.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "721": {
+    "name": "LycanChain",
+    "explorers": [
+      {
+        "url": "https://explorer.lycanchain.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "747": {
+    "name": "Flow Mainnet",
+    "explorers": [
+      {
+        "url": "https://evm.flow.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "758": {
+    "name": "Ozone",
+    "explorers": [
+      {
+        "url": "https://ozonescan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "766": {
+    "name": "QOM ONE",
+    "explorers": [
+      {
+        "url": "https://scan.qom.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "810": {
+    "name": "Haven1 Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.testnet.haven1.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "813": {
+    "name": "Qitmeer",
+    "explorers": [
+      {
+        "url": "https://qng.qitmeer.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "862": {
+    "name": "Pixie Chain",
+    "explorers": [
+      {
+        "url": "https://scan.chain.pixie.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "869": {
+    "name": "World Mobile",
+    "explorers": [
+      {
+        "url": "https://explorer.worldmobile.io/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "870": {
+    "name": "Autonomys EVM",
+    "explorers": [
+      {
+        "url": "https://explorer.auto-evm.mainnet.autonomys.xyz/",
+        "hostedBy": "protofire"
+      }
+    ]
+  },
+  "884": {
+    "name": "Bit Rock",
+    "explorers": [
+      {
+        "url": "https://explorer.bit-rock.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "890": {
+    "name": "Capital Exchange",
+    "explorers": [
+      {
+        "url": "https://explorer.capitalexchange.net",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "893": {
+    "name": "Adil Chain",
+    "explorers": [
+      {
+        "url": "https://adilchain-scan.io",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "899": {
+    "name": "Maxi Network",
+    "explorers": [
+      {
+        "url": "https://mainnet.maxi.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "901": {
+    "name": "Derive Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet-explorer.derive.xyz/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "919": {
+    "name": "Mode Sepolia Testnet",
+    "explorers": [
+      {
+        "url": "https://sepolia.explorer.mode.network/",
+        "hostedBy": "conduit"
+      }
+    ]
+  },
+  "957": {
+    "name": "Derive Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.derive.xyz/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "991": {
+    "name": "TabiChain Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet.tabiscan.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "999": {
+    "name": "HyperEVM Mainnet",
+    "explorers": [
+      {
+        "url": "https://www.hyperscan.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1005": {
+    "name": "Mind Smart Chain",
+    "explorers": [
+      {
+        "url": "https://mainnet.mindscan.info/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1006": {
+    "name": "Lemon Chain",
+    "explorers": [
+      {
+        "url": "https://explorer.lemonchain.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1011": {
+    "name": "GON",
+    "explorers": [
+      {
+        "url": "https://gonscan.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1050": {
+    "name": "DIA LaserNet Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.diadata.org/",
+        "hostedBy": "conduit"
+      }
+    ]
+  },
+  "1071": {
+    "name": "OpenGPU Mainnet",
+    "explorers": [
+      {
+        "url": "https://mbs.ogpuscan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1076": {
+    "name": "IOTA EVM Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.evm.testnet.iota.cafe/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "1081": {
+    "name": "Loop",
+    "explorers": [
+      {
+        "url": "https://explorer.mainnetloop.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1088": {
+    "name": "Metis",
+    "explorers": [
+      {
+        "url": "https://andromeda-explorer.metis.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1125": {
+    "name": "Taker Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.taker.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1130": {
+    "name": "Jellyfish",
+    "explorers": [
+      {
+        "url": "https://blockscout.mainnet.ocean.jellyfishsdk.com",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1131": {
+    "name": "DeFiChain",
+    "explorers": [
+      {
+        "url": "https://testnet-dmc.mydefichain.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1132": {
+    "name": "Omchain",
+    "explorers": [
+      {
+        "url": "https://explorer.omchain.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1135": {
+    "name": "Lisk ",
+    "explorers": [
+      {
+        "url": "https://blockscout.lisk.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "1190": {
+    "name": "BCTCHAIN Chain",
+    "explorers": [
+      {
+        "url": "https://scan.bctchain.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1233": {
+    "name": "Fitochain",
+    "explorers": [
+      {
+        "url": "https://explorer.fitochain.com",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1234": {
+    "name": "Step Network",
+    "explorers": [
+      {
+        "url": "https://stepscan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1259": {
+    "name": "Velo Labs",
+    "explorers": [
+      {
+        "url": "https://novascan.velo.org",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1300": {
+    "name": "Glue Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.glue.net/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1301": {
+    "name": "Unichain Sepolia Testnet",
+    "explorers": [
+      {
+        "url": "https://unichain-sepolia.blockscout.com",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "1311": {
+    "name": "Inco",
+    "explorers": [
+      {
+        "url": "https://explorer.testnet.inco.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1315": {
+    "name": "DATA Network Aeneid",
+    "explorers": [
+      {
+        "url": "https://aeneid.datanetscan.io/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "1319": {
+    "name": "AIA Mainnet",
+    "explorers": [
+      {
+        "url": "https://aiascan.com",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1330": {
+    "name": "ONN Chain",
+    "explorers": [
+      {
+        "url": "https://onnscan.com",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1345": {
+    "name": "OpenZK",
+    "explorers": [
+      {
+        "url": "https://openzk.calderaexplorer.xyz/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "1359": {
+    "name": "ISPAY",
+    "explorers": [
+      {
+        "url": "https://scan.ispay.vip/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1370": {
+    "name": "Ramestta",
+    "explorers": [
+      {
+        "url": "https://ramascan.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1390": {
+    "name": "Stratis",
+    "explorers": [
+      {
+        "url": "https://explorer.stratisevm.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1424": {
+    "name": "Perennial Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.perennial.foundation/",
+        "hostedBy": "conduit"
+      }
+    ]
+  },
+  "1425": {
+    "name": "Lit Protocol",
+    "explorers": [
+      {
+        "url": "https://chain.litprotocol.com",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1480": {
+    "name": "Vana",
+    "explorers": [
+      {
+        "url": "https://vanascan.io/",
+        "hostedBy": "protofire"
+      }
+    ]
+  },
+  "1490": {
+    "name": "Vitruveo",
+    "explorers": [
+      {
+        "url": "https://explorer-new.vitruveo.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1501": {
+    "name": "BEVM",
+    "explorers": [
+      {
+        "url": "https://scan-canary.bevm.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1514": {
+    "name": "DATA Network",
+    "explorers": [
+      {
+        "url": "https://www.datanetscan.io/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "1529": {
+    "name": "BearNetwork",
+    "explorers": [
+      {
+        "url": "https://brnkscan.bearnetwork.net/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1532": {
+    "name": "Xai",
+    "explorers": [
+      {
+        "url": "https://explorer.xai-chain.net/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1566": {
+    "name": "Eluv",
+    "explorers": [
+      {
+        "url": "https://exp.contentfabric.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1577": {
+    "name": "Etho",
+    "explorers": [
+      {
+        "url": "https://explorer.ethoprotocol.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1611": {
+    "name": "NVNM Chain Mainnet",
+    "explorers": [
+      {
+        "url": "https://evm.explorer.nvnmchain.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1612": {
+    "name": "OpenLedger Mainnet",
+    "explorers": [
+      {
+        "url": "https://scan.openledger.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1625": {
+    "name": "Gravity",
+    "explorers": [
+      {
+        "url": "https://explorer.gravity.xyz/",
+        "hostedBy": "conduit"
+      }
+    ]
+  },
+  "1648": {
+    "name": "DBK",
+    "explorers": [
+      {
+        "url": "https://scan.dbkchain.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1650": {
+    "name": "IIC Blockchain",
+    "explorers": [
+      {
+        "url": "https://scan.iic-blockchain.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1687": {
+    "name": "Mint Chain Sepolia",
+    "explorers": [
+      {
+        "url": "https://sepolia-testnet-explorer.mintchain.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1707": {
+    "name": "TBSI Mainnet",
+    "explorers": [
+      {
+        "url": "https://exp.blockchain.or.th/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1708": {
+    "name": "TBSI Testnet",
+    "explorers": [
+      {
+        "url": "https://exp.testnet.blockchain.or.th/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1717": {
+    "name": "Doric",
+    "explorers": [
+      {
+        "url": "https://explorer.doric.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1729": {
+    "name": "Reya",
+    "explorers": [
+      {
+        "url": "https://explorer.reya.network/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "1738": {
+    "name": "Xai Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet-explorer-v2.xai-chain.net/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1750": {
+    "name": "Metal L2",
+    "explorers": [
+      {
+        "url": "https://explorer.metall2.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1829": {
+    "name": "Playnance Playblock",
+    "explorers": [
+      {
+        "url": "https://explorer.playblock.io/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "1868": {
+    "name": "Soneium",
+    "explorers": [
+      {
+        "url": "https://soneium.blockscout.com",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "1874": {
+    "name": "Whitechain Sepolia",
+    "explorers": [
+      {
+        "url": "https://explorer.testnet.whitechain.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1890": {
+    "name": "LightLink Phoenix Mainnet",
+    "explorers": [
+      {
+        "url": "https://phoenix.lightlink.io/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "1891": {
+    "name": "LightLink Pegasus Testnet",
+    "explorers": [
+      {
+        "url": "https://pegasus.lightlink.io/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "1907": {
+    "name": "Bitcichain Mainnet",
+    "explorers": [
+      {
+        "url": "https://bitciexplorer.com",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1908": {
+    "name": "Bitcichain Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet.bitciexplorer.com",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1919": {
+    "name": "TurkChain",
+    "explorers": [
+      {
+        "url": "https://turkscan.com",
+        "hostedBy": "self-hosted"
+      }
+    ]
+  },
+  "1923": {
+    "name": "Swell Chain",
+    "explorers": [
+      {
+        "url": "https://explorer.swellnetwork.io/",
+        "hostedBy": "altlayer-raas"
+      }
+    ]
+  },
+  "1924": {
+    "name": "Swell Testnet",
+    "explorers": [
+      {
+        "url": "https://swell-testnet-explorer.alt.technology/",
+        "hostedBy": "altlayer-raas"
+      }
+    ]
+  },
+  "1946": {
+    "name": "Soneium Minato Testnet",
+    "explorers": [
+      {
+        "url": "https://soneium-minato.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "1969": {
+    "name": "SCS Chain",
+    "explorers": [
+      {
+        "url": "https://testnetscan.scschain.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1972": {
+    "name": "Redecoin",
+    "explorers": [
+      {
+        "url": "https://explorer3.redecoin.eu/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1995": {
+    "name": "edeXa Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.testnet.edexa.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "2000": {
+    "name": "Dogechain",
+    "explorers": [
+      {
+        "url": "https://explorer.dogechain.dog/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "2013": {
+    "name": "Particle Mainnet Alpha",
+    "explorers": [
+      {
+        "url": "https://scan-mainnet-alpha.particle.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "2020": {
+    "name": "Ronin Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.roninchain.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "2024": {
+    "name": "Swan Saturn",
+    "explorers": [
+      {
+        "url": "https://saturn-explorer.swanchain.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "2026": {
+    "name": "Edgeless",
+    "explorers": [
+      {
+        "url": "https://edgeless-mainnet.calderaexplorer.xyz/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "2040": {
+    "name": "Vanar",
+    "explorers": [
+      {
+        "url": "https://explorer.vanarchain.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "2048": {
+    "name": "Stratos",
+    "explorers": [
+      {
+        "url": "https://web3-explorer-mesos.thestratos.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "2192": {
+    "name": "SnaxChain Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.snaxchain.io/",
+        "hostedBy": "conduit"
+      }
+    ]
+  },
+  "2233": {
+    "name": "Chainbase",
+    "explorers": [
+      {
+        "url": "https://testnet.explorer.chainbase.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "2288": {
+    "name": "Moca Chain",
+    "explorers": [
+      {
+        "url": "https://scan.mocachain.org/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "2340": {
+    "name": "Atleta Olympia Testnet",
+    "explorers": [
+      {
+        "url": "https://blockscout.atleta.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "2366": {
+    "name": "KiteAI Mainnet",
+    "explorers": [
+      {
+        "url": "https://kitescan.ai/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "2368": {
+    "name": "KiteAI Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet.kitescan.ai/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "2379": {
+    "name": "EON Chain",
+    "explorers": [
+      {
+        "url": "https://eonixscan.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "2391": {
+    "name": "TAC SPB",
+    "explorers": [
+      {
+        "url": "https://spb.explorer.tac.build/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "2410": {
+    "name": "K2",
+    "explorers": [
+      {
+        "url": "https://explorer.karak.network/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "2420": {
+    "name": "Rufus",
+    "explorers": [
+      {
+        "url": "https://rufus.calderaexplorer.xyz/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "2443": {
+    "name": "Haus Chain Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer-testnet.hausserver.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "2488": {
+    "name": "NOWChain",
+    "explorers": [
+      {
+        "url": "https://nowscan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "2525": {
+    "name": "inEVM Mainnet",
+    "explorers": [
+      {
+        "url": "https://inevm.calderaexplorer.xyz/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "2649": {
+    "name": "AILayer Mainnet",
+    "explorers": [
+      {
+        "url": "https://mainnet-explorer.ailayer.xyz",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "2679": {
+    "name": "Eoraptor",
+    "explorers": [
+      {
+        "url": "https://scan.eoraptor.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "2748": {
+    "name": "Taker Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet-explorer.taker.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "2786": {
+    "name": "Apertum",
+    "explorers": [
+      {
+        "url": "https://explorer.apertum.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "2800": {
+    "name": "LayerAI Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.layerai.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "2810": {
+    "name": "Morph",
+    "explorers": [
+      {
+        "url": "https://explorer-holesky.morphl2.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "2818": {
+    "name": "Morph",
+    "explorers": [
+      {
+        "url": "https://explorer.morphl2.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "2911": {
+    "name": "Hychain",
+    "explorers": [
+      {
+        "url": "https://hychain.calderaexplorer.xyz/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "2999": {
+    "name": "Aevo",
+    "explorers": [
+      {
+        "url": "https://explorer.aevo.xyz/",
+        "hostedBy": "conduit"
+      }
+    ]
+  },
+  "3003": {
+    "name": "Canxiom",
+    "explorers": [
+      {
+        "url": "https://explorer.canxium.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "3018": {
+    "name": "AICChain Mainnet",
+    "explorers": [
+      {
+        "url": "https://scan.aicchain.io",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "3068": {
+    "name": "BiFrost Network",
+    "explorers": [
+      {
+        "url": "https://explorer.mainnet.bifrostnetwork.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "3110": {
+    "name": "SatoshiVM",
+    "explorers": [
+      {
+        "url": "https://testnet.svmscan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "3333": {
+    "name": "Aves Network",
+    "explorers": [
+      {
+        "url": "https://avescan.io",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "3366": {
+    "name": "Meroneum",
+    "explorers": [
+      {
+        "url": "https://meronscan.ai/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "3502": {
+    "name": "JFIN POS",
+    "explorers": [
+      {
+        "url": "https://exp.jfinpos.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "3721": {
+    "name": "Xone Mainnet",
+    "explorers": [
+      {
+        "url": "https://xonescan.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "3737": {
+    "name": "Crossbell",
+    "explorers": [
+      {
+        "url": "https://scan.crossbell.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "3777": {
+    "name": "INRI CHAIN",
+    "explorers": [
+      {
+        "url": "https://explorer.inri.life",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "3799": {
+    "name": "Tangle Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet-explorer.tangle.tools/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "3888": {
+    "name": "Kalycoin",
+    "explorers": [
+      {
+        "url": "https://kalyscan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "4024": {
+    "name": "TONSquare",
+    "explorers": [
+      {
+        "url": "https://testnet.explorer.tonsquare.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "4061": {
+    "name": "Nahmii",
+    "explorers": [
+      {
+        "url": "https://explorer.nahmii.io",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "4078": {
+    "name": "Muster Network",
+    "explorers": [
+      {
+        "url": "https://muster-explorer.alt.technology/",
+        "hostedBy": "altlayer-raas"
+      }
+    ]
+  },
+  "4242": {
+    "name": "Nexi Chain",
+    "explorers": [
+      {
+        "url": "https://www.nexiscan.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "4326": {
+    "name": "MegaETH",
+    "explorers": [
+      {
+        "url": "https://megaeth.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "4355": {
+    "name": "BETHERINCE",
+    "explorers": [
+      {
+        "url": "https://bethscan.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "4399": {
+    "name": "Cysic Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer-evm.cysic.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "4460": {
+    "name": "Orderly Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet-explorer.orderly.org/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "4488": {
+    "name": "Hydra Chain",
+    "explorers": [
+      {
+        "url": "https://hydragon.hydrachain.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "4545": {
+    "name": "E Money Network",
+    "explorers": [
+      {
+        "url": "https://explore.emoney.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "4613": {
+    "name": "Very Network",
+    "explorers": [
+      {
+        "url": "https://veryscan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "4646": {
+    "name": "MST Mainnet",
+    "explorers": [
+      {
+        "url": "https://mstscan.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "4661": {
+    "name": "AppChain Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.appchain.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "4663": {
+    "name": "Robinhood Chain",
+    "explorers": [
+      {
+        "url": "https://robinhoodchain.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "4801": {
+    "name": "World Chain Testnet",
+    "explorers": [
+      {
+        "url": "https://worldchain-sepolia.explorer.alchemy.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "4848": {
+    "name": "BlockSurety",
+    "explorers": [
+      {
+        "url": "https://blocksurety.net/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "4888": {
+    "name": "BXN Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet.blackfortscan.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "4913": {
+    "name": "OEV Network",
+    "explorers": [
+      {
+        "url": "https://oev.explorer.api3.org/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "5031": {
+    "name": "Somnia",
+    "explorers": [
+      {
+        "url": "https://explorer.somnia.network/",
+        "hostedBy": "protofire"
+      }
+    ]
+  },
+  "5042": {
+    "name": "Arc Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.arc.io/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "5101": {
+    "name": "Syndicate Frame",
+    "explorers": [
+      {
+        "url": "https://explorer-frame.syndicate.io/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "5112": {
+    "name": "Ham",
+    "explorers": [
+      {
+        "url": "https://ham.calderaexplorer.xyz/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "5124": {
+    "name": "Seismic Devnet 2",
+    "explorers": [
+      {
+        "url": "https://explorer-2.seismicdev.net/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "5272": {
+    "name": "D-Ecosystem",
+    "explorers": [
+      {
+        "url": "https://mainnet-explorer.d-ecosystem.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "5330": {
+    "name": "Superseed",
+    "explorers": [
+      {
+        "url": "https://explorer.superseed.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "5371": {
+    "name": "Settlus Mainnet",
+    "explorers": [
+      {
+        "url": "https://mainnet.settlus.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "5424": {
+    "name": "edeXa Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.edexa.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "5464": {
+    "name": "sagaevm",
+    "explorers": [
+      {
+        "url": "https://explorer.edexa.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "5656": {
+    "name": "QIE chain",
+    "explorers": [
+      {
+        "url": "https://mainnet.qiblockchain.online/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "5845": {
+    "name": "Tangle",
+    "explorers": [
+      {
+        "url": "https://explorer.tangle.tools",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "5887": {
+    "name": "MANTRACHAIN Testnet",
+    "explorers": [
+      {
+        "url": "https://blockscout.dukong.mantrascan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "5888": {
+    "name": "MANTRA",
+    "explorers": [
+      {
+        "url": "https://blockscout.mantrascan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "5920": {
+    "name": "Chainweb EVM Chain20",
+    "explorers": [
+      {
+        "url": "https://chain-20.evm-testnet-blockscout.chainweb.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "5921": {
+    "name": "Chainweb EVM Chain21",
+    "explorers": [
+      {
+        "url": "https://chain-21.evm-testnet-blockscout.chainweb.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "5922": {
+    "name": "Chainweb EVM Chain22",
+    "explorers": [
+      {
+        "url": "https://chain-22.evm-testnet-blockscout.chainweb.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "5923": {
+    "name": "Chainweb EVM Chain23",
+    "explorers": [
+      {
+        "url": "https://chain-23.evm-testnet-blockscout.chainweb.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "5924": {
+    "name": "Chainweb EVM Chain24",
+    "explorers": [
+      {
+        "url": "https://chain-24.evm-testnet-blockscout.chainweb.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "6174": {
+    "name": "ANDE Network Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.ande.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "6278": {
+    "name": "Rails Network",
+    "explorers": [
+      {
+        "url": "https://explore.steamexchange.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "6292": {
+    "name": "MAYA CHAIN",
+    "explorers": [
+      {
+        "url": "https://scan.mayachain.io",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "6396": {
+    "name": "NEX Chain",
+    "explorers": [
+      {
+        "url": "https://explorer.getnexwallet.com",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "6497": {
+    "name": "Awaji",
+    "explorers": [
+      {
+        "url": "https://awaji.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "6498": {
+    "name": "Mizuhiki",
+    "explorers": [
+      {
+        "url": "https://mizuhiki.blockscout.com",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "6805": {
+    "name": "RACE",
+    "explorers": [
+      {
+        "url": "https://racescan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "6806": {
+    "name": "RACE",
+    "explorers": [
+      {
+        "url": "https://testnet.racescan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "6880": {
+    "name": "MTT Network",
+    "explorers": [
+      {
+        "url": "https://explorer.mtt.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "6900": {
+    "name": "Animechain Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet-explorer.anime.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "6923": {
+    "name": "LUST Chain",
+    "explorers": [
+      {
+        "url": "https://explorer.lustchain.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "7000": {
+    "name": "ZetaChain",
+    "explorers": [
+      {
+        "url": "https://zetascan.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "7001": {
+    "name": "ZetaChain Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet.zetascan.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "7171": {
+    "name": "Bitrock",
+    "explorers": [
+      {
+        "url": "https://explorer.bit-rock.io",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "7282": {
+    "name": "Salvorias Chain",
+    "explorers": [
+      {
+        "url": "https://savscanner.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "7332": {
+    "name": "Horizen Eon",
+    "explorers": [
+      {
+        "url": "https://eon-explorer.horizenlabs.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "7341": {
+    "name": "Shyft Mainnet",
+    "explorers": [
+      {
+        "url": "https://bx.shyft.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "7534": {
+    "name": "Rivalz",
+    "explorers": [
+      {
+        "url": "https://rivalz.calderaexplorer.xyz/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "7741": {
+    "name": "RWA Chain",
+    "explorers": [
+      {
+        "url": "https://explorer.rwa-chain.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "7869": {
+    "name": "Powerloom Mainnet V2",
+    "explorers": [
+      {
+        "url": "https://explorer-v2.powerloom.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "7979": {
+    "name": "DOS",
+    "explorers": [
+      {
+        "url": "https://doscan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "8021": {
+    "name": "Numine",
+    "explorers": [
+      {
+        "url": "https://numine.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "8329": {
+    "name": "Lorenzo Mainnet",
+    "explorers": [
+      {
+        "url": "https://scan.lorenzo-protocol.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "8449": {
+    "name": "Deriw Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.dev.deriw.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "8453": {
+    "name": "Base",
+    "explorers": [
+      {
+        "url": "https://base.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "8472": {
+    "name": "MYRX-MAINNET",
+    "explorers": [
+      {
+        "url": "https://explorer.myrxwallet.io",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "8700": {
+    "name": "Chronos Autonomys EVM",
+    "explorers": [
+      {
+        "url": "https://explorer.auto-evm.mainnet.autonomys.xyz/",
+        "hostedBy": "protofire"
+      }
+    ]
+  },
+  "8811": {
+    "name": "Haven1 Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.haven1.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "8818": {
+    "name": "C Link Chain",
+    "explorers": [
+      {
+        "url": "https://explorer.clinkchain.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "8822": {
+    "name": "IOTA EVM",
+    "explorers": [
+      {
+        "url": "https://explorer.evm.iota.org/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "8853": {
+    "name": "Clique",
+    "explorers": [
+      {
+        "url": "https://explorer.myclique.io",
+        "hostedBy": "conduit"
+      }
+    ]
+  },
+  "8866": {
+    "name": "Pontem Lumio",
+    "explorers": [
+      {
+        "url": "https://explorer.lumio.io",
+        "hostedBy": "conduit"
+      }
+    ]
+  },
+  "8889": {
+    "name": "Vyvo Smart Chain",
+    "explorers": [
+      {
+        "url": "https://vscscan.org",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "8899": {
+    "name": "JBC Blockchain",
+    "explorers": [
+      {
+        "url": "https://exp.jibchain.net/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "8911": {
+    "name": "Algen",
+    "explorers": [
+      {
+        "url": "https://scan.algen.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "8912": {
+    "name": "Algen Testnet 1",
+    "explorers": [
+      {
+        "url": "https://scan.test.algen.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "8921": {
+    "name": "Algen Layer2",
+    "explorers": [
+      {
+        "url": "https://scan.alg2.algen.network",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "8922": {
+    "name": "Algen Testnet L2",
+    "explorers": [
+      {
+        "url": "https://scan.alg2-test.algen.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "8995": {
+    "name": "Bloxberg",
+    "explorers": [
+      {
+        "url": "https://blockexplorer.bloxberg.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "9000": {
+    "name": "DxD Scan",
+    "explorers": [
+      {
+        "url": "https://dxdscan.com",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "9008": {
+    "name": "Shido Network",
+    "explorers": [
+      {
+        "url": "https://shidoscan.net/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "9116": {
+    "name": "Pivotal Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet.pivotalscan.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "9280": {
+    "name": "Rabbit Chain Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer-testnet.rabbitchain.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "9302": {
+    "name": "Galactica",
+    "explorers": [
+      {
+        "url": "https://explorer-reticulum.galactica.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "9369": {
+    "name": "Z Chain",
+    "explorers": [
+      {
+        "url": "https://zscan.live/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "9372": {
+    "name": "Oasys Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.testnet.oasys.games/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "9898": {
+    "name": "Larissa Chain",
+    "explorers": [
+      {
+        "url": "https://scan.larissa.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "9996": {
+    "name": "Mind Smart Chain",
+    "explorers": [
+      {
+        "url": "https://mainnet.mindscan.info/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "9999": {
+    "name": "Metagarden",
+    "explorers": [
+      {
+        "url": "https://scan.metagarden.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "10000": {
+    "name": "BenSwap",
+    "explorers": [
+      {
+        "url": "https://smartscout.cash/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "10081": {
+    "name": "Japan Open Chain Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.testnet.japanopenchain.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "10087": {
+    "name": "Gate Layer Testnet",
+    "explorers": [
+      {
+        "url": "https://www.gatescan.org/gatelayer-testnet",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "10088": {
+    "name": "Gate Layer Mainnet",
+    "explorers": [
+      {
+        "url": "https://www.gatescan.org/gatelayer",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "10112": {
+    "name": "Cypher Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet3.cypherscan.ai/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "10200": {
+    "name": "Gnosis Chiado Testnet",
+    "explorers": [
+      {
+        "url": "https://gnosis-chiado.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "10395": {
+    "name": "Worldland Testnet",
+    "explorers": [
+      {
+        "url": "https://scan.worldland.foundation",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "10901": {
+    "name": "Zama Gateway Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.testnet.zama.org/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "10946": {
+    "name": "Quadrans",
+    "explorers": [
+      {
+        "url": "https://explorer.quadrans.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "11011": {
+    "name": "Shape Testnet",
+    "explorers": [
+      {
+        "url": "https://sepolia.shapescan.xyz",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "11113": {
+    "name": "Compose Hoodi Rollup A",
+    "explorers": [
+      {
+        "url": "https://rollup-a.explorer.testnet.compose.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "11141": {
+    "name": "Ankawings Network Testnet",
+    "explorers": [
+      {
+        "url": "https://ankawings.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "11221": {
+    "name": "Shine Chain",
+    "explorers": [
+      {
+        "url": "https://shinescan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "11235": {
+    "name": "HAQQ",
+    "explorers": [
+      {
+        "url": "https://explorer.haqq.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "11521": {
+    "name": "BEVM",
+    "explorers": [
+      {
+        "url": "https://scan-satschain.bevm.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "11690": {
+    "name": "Incentiv Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.incentiv.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "12024": {
+    "name": "Gelios",
+    "explorers": [
+      {
+        "url": "https://alpha.gelios.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "12216": {
+    "name": "L2 Protocol",
+    "explorers": [
+      {
+        "url": "https://l2pscan.com",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "12323": {
+    "name": "Huddle01 Mainnet",
+    "explorers": [
+      {
+        "url": "https://huddle01.calderaexplorer.xyz/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "12343": {
+    "name": "Elastos ECO",
+    "explorers": [
+      {
+        "url": "https://eco.elastos.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "12553": {
+    "name": "RSS3",
+    "explorers": [
+      {
+        "url": "https://scan.rss3.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "13001": {
+    "name": "SnaxChain Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet-explorer.snaxchain.io/",
+        "hostedBy": "conduit"
+      }
+    ]
+  },
+  "13371": {
+    "name": "Immutable zkEVM",
+    "explorers": [
+      {
+        "url": "https://explorer.immutable.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "13473": {
+    "name": "Immutable zkEVM Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.testnet.immutable.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "13746": {
+    "name": "Game7",
+    "explorers": [
+      {
+        "url": "https://testnet.game7.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "14235": {
+    "name": "Bitlazer",
+    "explorers": [
+      {
+        "url": "https://bitlazer.calderaexplorer.xyz/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "14800": {
+    "name": "Vana Moksha Testnet",
+    "explorers": [
+      {
+        "url": "https://moksha.vanascan.io/",
+        "hostedBy": "protofire"
+      }
+    ]
+  },
+  "14801": {
+    "name": "Vana Satori Testnet",
+    "explorers": [
+      {
+        "url": "https://satori.vanascan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "15151": {
+    "name": "Yorato Chain",
+    "explorers": [
+      {
+        "url": "https://yoratoscan.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "15551": {
+    "name": "Loop",
+    "explorers": [
+      {
+        "url": "https://explorer.mainnetloop.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "17071": {
+    "name": "Onchain Points",
+    "explorers": [
+      {
+        "url": "https://explorer.onchainpoints.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "17247": {
+    "name": "Chainers",
+    "explorers": [
+      {
+        "url": "https://explorer.chainers.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "17406": {
+    "name": "Mal Network",
+    "explorers": [
+      {
+        "url": "https://scan.mal.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "18686": {
+    "name": "Moonchain",
+    "explorers": [
+      {
+        "url": "https://explorer.moonchain.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "18880": {
+    "name": "EXPchain Testnet",
+    "explorers": [
+      {
+        "url": "https://blockscout-testnet.expchain.ai/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "19011": {
+    "name": "Oasys HOME Verse Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.oasys.homeverse.games/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "20197": {
+    "name": "Oasys SAND Verse",
+    "explorers": [
+      {
+        "url": "https://explorer.sandverse.oasys.games/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "21133": {
+    "name": "All About Healthy",
+    "explorers": [
+      {
+        "url": "https://exp.c4ex.net",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "21363": {
+    "name": "Lestnet",
+    "explorers": [
+      {
+        "url": "https://explore.lestnet.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "21802": {
+    "name": "Libya Blockchain Network",
+    "explorers": [
+      {
+        "url": "https://ghadames.lbnchain.com/",
+        "hostedBy": "conduit"
+      }
+    ]
+  },
+  "21892": {
+    "name": "DAC Interstellar Mainnet",
+    "explorers": [
+      {
+        "url": "https://dacscan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "21894": {
+    "name": "DAC Inception Testnet",
+    "explorers": [
+      {
+        "url": "https://exptest.dachain.tech",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "22224": {
+    "name": "Compose Hoodi Rollup B",
+    "explorers": [
+      {
+        "url": "https://rollup-b.explorer.testnet.compose.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "22469": {
+    "name": "Hii Blockchain",
+    "explorers": [
+      {
+        "url": "https://explorer-sb.teknix.dev/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "22776": {
+    "name": "MAP Relay Chain",
+    "explorers": [
+      {
+        "url": "https://explorer.mapprotocol.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "24499": {
+    "name": "astrolayer",
+    "explorers": [
+      {
+        "url": "https://explorer.astrolayer.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "24776": {
+    "name": "Degree of Outreach",
+    "explorers": [
+      {
+        "url": "https://explorer.6do.world",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "25925": {
+    "name": "Bitkub Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet.bkcscan.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "27563": {
+    "name": "Onchain",
+    "explorers": [
+      {
+        "url": "https://scan.onchaincoin.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "28802": {
+    "name": "Incentiv Testnet 2",
+    "explorers": [
+      {
+        "url": "https://explorer-testnet.incentiv.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "30181": {
+    "name": "AICChain Testnet",
+    "explorers": [
+      {
+        "url": "https://testscan.aicchain.io",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "32769": {
+    "name": "Zilliqa 2 Mainnet",
+    "explorers": [
+      {
+        "url": "https://zilliqa.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "33101": {
+    "name": "Zilliqa 2 Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet.zilliqa.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "33111": {
+    "name": "APE Curtis",
+    "explorers": [
+      {
+        "url": "https://apechain-curtis.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "33139": {
+    "name": "ApeChain",
+    "explorers": [
+      {
+        "url": "https://apechain.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "33401": {
+    "name": "SlingShot",
+    "explorers": [
+      {
+        "url": "https://explore.slingshotdao.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "34443": {
+    "name": "Mode",
+    "explorers": [
+      {
+        "url": "https://explorer.mode.network/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "35441": {
+    "name": "Q",
+    "explorers": [
+      {
+        "url": "https://explorer.q.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "38833": {
+    "name": "Igra Network",
+    "explorers": [
+      {
+        "url": "https://explorer.igralabs.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "39815": {
+    "name": "Oho",
+    "explorers": [
+      {
+        "url": "https://cloud.oho.ai/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "40875": {
+    "name": "Oasys HOME Verse Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.testnet.oasys.homeverse.games/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "42026": {
+    "name": "Donatuz",
+    "explorers": [
+      {
+        "url": "https://explorer.donatuz.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "42101": {
+    "name": "Push Testnet Donut",
+    "explorers": [
+      {
+        "url": "https://donut.push.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "42161": {
+    "name": "Arbitrum One Nitro",
+    "explorers": [
+      {
+        "url": "https://arbitrum.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "42170": {
+    "name": "Arbitrum Nova",
+    "explorers": [
+      {
+        "url": "https://arbitrum-nova.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "42220": {
+    "name": "Celo",
+    "explorers": [
+      {
+        "url": "https://celo.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "42421": {
+    "name": "Xend Finance Asset Chain",
+    "explorers": [
+      {
+        "url": "https://scan-testnet.assetchain.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "42766": {
+    "name": "zkFair",
+    "explorers": [
+      {
+        "url": "https://scan.zkfair.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "42793": {
+    "name": "Etherlink",
+    "explorers": [
+      {
+        "url": "https://explorer.etherlink.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "43111": {
+    "name": "Hemi",
+    "explorers": [
+      {
+        "url": "https://explorer.hemi.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "43337": {
+    "name": "RuneChain",
+    "explorers": [
+      {
+        "url": "https://explorer.runechain.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "43419": {
+    "name": "GUNZ Mainnet",
+    "explorers": [
+      {
+        "url": "https://testnet.gunzscan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "45513": {
+    "name": "Blessnet",
+    "explorers": [
+      {
+        "url": "https://blessnet.calderaexplorer.xyz/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "46630": {
+    "name": "Robinhood Chain Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.testnet.chain.robinhood.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "47763": {
+    "name": "Neo Smart Economy",
+    "explorers": [
+      {
+        "url": "https://xexplorer.neo.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "47805": {
+    "name": "Rei Network",
+    "explorers": [
+      {
+        "url": "https://scan.rei.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "49088": {
+    "name": "Bifrost Network Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.testnet.bifrostnetwork.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "50312": {
+    "name": "Somnia Testnet",
+    "explorers": [
+      {
+        "url": "https://shannon-explorer.somnia.network/",
+        "hostedBy": "protofire"
+      }
+    ]
+  },
+  "50333": {
+    "name": "Pretzel",
+    "explorers": [
+      {
+        "url": "https://explorer.pretzel.build/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "51012": {
+    "name": "PlutoChain",
+    "explorers": [
+      {
+        "url": "https://explorer.plutochain.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "51828": {
+    "name": "ChainBchaounty",
+    "explorers": [
+      {
+        "url": "https://scan.chainbounty.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "52014": {
+    "name": "Electroneum",
+    "explorers": [
+      {
+        "url": "https://electroneum.blockscout.com",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "53302": {
+    "name": "Superseed Sepolia",
+    "explorers": [
+      {
+        "url": "https://sepolia-explorer.superseed.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "53339": {
+    "name": "KeeeX",
+    "explorers": [
+      {
+        "url": "https://blk.keeex.me/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "54176": {
+    "name": "Over Mainnet",
+    "explorers": [
+      {
+        "url": "https://scan.over.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "54211": {
+    "name": "HAQQ Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.testedge2.haqq.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "55139": {
+    "name": "KIVA Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.kivanet.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "55244": {
+    "name": "Superposition",
+    "explorers": [
+      {
+        "url": "https://explorer.superposition.so/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "55551": {
+    "name": "Photon",
+    "explorers": [
+      {
+        "url": "https://testnet2.photonchain.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "57000": {
+    "name": "Syscoin Rollux Testnet",
+    "explorers": [
+      {
+        "url": "https://rollux.tanenbaum.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "57073": {
+    "name": "Ink",
+    "explorers": [
+      {
+        "url": "https://explorer.inkonchain.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "59144": {
+    "name": "Linea",
+    "explorers": [
+      {
+        "url": "https://explorer.linea.build/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "60808": {
+    "name": "BOB",
+    "explorers": [
+      {
+        "url": "https://explorer.gobob.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "60850": {
+    "name": "Perennial Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer-sepolia.perennial.foundation/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "61406": {
+    "name": "Kai Chain",
+    "explorers": [
+      {
+        "url": "https://explorer.kaichain.net/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "62049": {
+    "name": "Optopia Testnet",
+    "explorers": [
+      {
+        "url": "https://scan-testnet.optopia.ai/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "62298": {
+    "name": "Citrea",
+    "explorers": [
+      {
+        "url": "https://explorer.testnet.citrea.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "65535": {
+    "name": "CyberChain Mainnet",
+    "explorers": [
+      {
+        "url": "https://scan.cyberchain.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "67412": {
+    "name": "ITA",
+    "explorers": [
+      {
+        "url": "https://explorer.itachain.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "69420": {
+    "name": "Alchemy Sepolia",
+    "explorers": [
+      {
+        "url": "https://alchemy-sepolia.explorer.alchemy.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "70700": {
+    "name": "Proof of Play Apex",
+    "explorers": [
+      {
+        "url": "https://explorer.apex.proofofplay.com/",
+        "hostedBy": "conduit"
+      }
+    ]
+  },
+  "70701": {
+    "name": "Proof of Play",
+    "explorers": [
+      {
+        "url": "https://explorer.boss.proofofplay.com/",
+        "hostedBy": "conduit"
+      }
+    ]
+  },
+  "73682": {
+    "name": "Renta",
+    "explorers": [
+      {
+        "url": "https://explorer.renta.network/",
+        "hostedBy": "conduit"
+      }
+    ]
+  },
+  "77410": {
+    "name": "RWA Chain Sepolia",
+    "explorers": [
+      {
+        "url": "https://sepolia-explorer.rwa-chain.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "78600": {
+    "name": "Vanar Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer-vanguard.vanarchain.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "78651": {
+    "name": "Nillion Network Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.testnet.nillion.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "80888": {
+    "name": "Onyx",
+    "explorers": [
+      {
+        "url": "https://explorer.onyx.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "80931": {
+    "name": "Forta Chain",
+    "explorers": [
+      {
+        "url": "https://explorer.forta.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "82614": {
+    "name": "VEMP Horizon",
+    "explorers": [
+      {
+        "url": "https://vemp-horizon.calderaexplorer.xyz/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "83333": {
+    "name": "OGORI",
+    "explorers": [
+      {
+        "url": "https://explorer.ogori.one",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "84532": {
+    "name": "Base Sepolia",
+    "explorers": [
+      {
+        "url": "https://base-sepolia.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "88118": {
+    "name": "Shark Network",
+    "explorers": [
+      {
+        "url": "https://sharkscan.app/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "88788": {
+    "name": "PropTech Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.ptekcoin.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "88817": {
+    "name": "Units",
+    "explorers": [
+      {
+        "url": "https://explorer-testnet.unit0.dev/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "91111": {
+    "name": "Henez Finance",
+    "explorers": [
+      {
+        "url": "https://henez.calderaexplorer.xyz/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "91120": {
+    "name": "MetaDAP",
+    "explorers": [
+      {
+        "url": "https://explorer.chain.metadap.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "91342": {
+    "name": "GIWA Sepolia",
+    "explorers": [
+      {
+        "url": "https://sepolia-explorer.giwa.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "97476": {
+    "name": "Doma Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer-testnet.doma.xyz/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "97477": {
+    "name": "Doma Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.doma.xyz/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "97741": {
+    "name": "Pepe Unchained",
+    "explorers": [
+      {
+        "url": "https://pepuscan.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "98866": {
+    "name": "Plume Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.plume.org",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "98867": {
+    "name": "Plume Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet-explorer.plume.org",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "98875": {
+    "name": "Nillion Network",
+    "explorers": [
+      {
+        "url": "https://explorer.nillion.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "98985": {
+    "name": "Superposition Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet-explorer.superposition.so/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "100640": {
+    "name": "DIA LaserNet Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet-explorer.diadata.org/",
+        "hostedBy": "conduit"
+      }
+    ]
+  },
+  "101010": {
+    "name": "Stability Global Trust Network",
+    "explorers": [
+      {
+        "url": "https://explorer.stabilityprotocol.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "102030": {
+    "name": "Creditcoin",
+    "explorers": [
+      {
+        "url": "https://creditcoin.blockscout.com",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "102031": {
+    "name": "Creditcoin Testnet",
+    "explorers": [
+      {
+        "url": "https://creditcoin-testnet.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "102032": {
+    "name": "Creditcoin Devnet",
+    "explorers": [
+      {
+        "url": "https://creditcoin-devnet.blockscout.com",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "103090": {
+    "name": "Crystaleum",
+    "explorers": [
+      {
+        "url": "https://view.crystaleum.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "110110": {
+    "name": "Mars Credit",
+    "explorers": [
+      {
+        "url": "https://blockscan.marscredit.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "111222": {
+    "name": "LibraChain",
+    "explorers": [
+      {
+        "url": "https://explorer.librachain.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "112358": {
+    "name": "Metachain One",
+    "explorers": [
+      {
+        "url": "https://explorer.metachain.one/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "123123": {
+    "name": "Rayls Devnet",
+    "explorers": [
+      {
+        "url": "https://devnet-explorer.rayls.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "123321": {
+    "name": "Gem",
+    "explorers": [
+      {
+        "url": "https://scan.gemchain.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "127823": {
+    "name": "Etherlink Shadownet",
+    "explorers": [
+      {
+        "url": "https://shadownet.explorer.etherlink.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "132902": {
+    "name": "Form",
+    "explorers": [
+      {
+        "url": "https://explorer.form.network/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "133717": {
+    "name": "Metis Hyperion Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.hyperion-testnet.metis.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "140125": {
+    "name": "Planck Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.enterprise.testnet.plancknetwork.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "150887": {
+    "name": "Maximo Testnet",
+    "explorers": [
+      {
+        "url": "https://maximoscan.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "167000": {
+    "name": "Taiko Alethia",
+    "explorers": [
+      {
+        "url": "https://blockscout.mainnet.taiko.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "181228": {
+    "name": "HPP Sepolia",
+    "explorers": [
+      {
+        "url": "https://sepolia-explorer.hpp.io",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "190415": {
+    "name": "HPP Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.hpp.io",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "191919": {
+    "name": "ALT Blockscan",
+    "explorers": [
+      {
+        "url": "https://scan.altblockscan.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "192940": {
+    "name": "Mind Network Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer-testnet.mindnetwork.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "201411": {
+    "name": "Rarimo",
+    "explorers": [
+      {
+        "url": "https://newevmscan.mainnet-beta.rarimo.com",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "202599": {
+    "name": "JuChain Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet.juscan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "202601": {
+    "name": "Ronin Saigon Testnet",
+    "explorers": [
+      {
+        "url": "https://saigon-explorer.roninchain.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "210000": {
+    "name": "JuChain Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.juscan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "210425": {
+    "name": "PlatON network",
+    "explorers": [
+      {
+        "url": "https://blockscout.platon.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "222222": {
+    "name": "Hydradx",
+    "explorers": [
+      {
+        "url": "https://explorer.evm.hydration.cloud/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "222888": {
+    "name": "Moca Chain Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet-scan.mocachain.org",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "247253": {
+    "name": "Saakuru Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer-testnet.saakuru.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "258432": {
+    "name": "Althea L1",
+    "explorers": [
+      {
+        "url": "https://explorer.althea.link/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "261131": {
+    "name": "Zama Gateway Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.mainnet.zama.org",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "314159": {
+    "name": "Filecoin Calibration Testnet",
+    "explorers": [
+      {
+        "url": "https://filecoin-testnet.blockscout.com",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "322202": {
+    "name": "Parex",
+    "explorers": [
+      {
+        "url": "https://scan.parex.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "323432": {
+    "name": "World Mobile Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet-explorer.worldmobile.net/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "355113": {
+    "name": "Bitfinity EVM",
+    "explorers": [
+      {
+        "url": "https://explorer.testnet.bitfinity.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "381931": {
+    "name": "Metal Blockchain",
+    "explorers": [
+      {
+        "url": "https://metalscan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "383353": {
+    "name": "Cheese Chain",
+    "explorers": [
+      {
+        "url": "https://cheesechain.calderaexplorer.xyz/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "412346": {
+    "name": "Adventure Layer",
+    "explorers": [
+      {
+        "url": "https://explorer-devnet.adventurelayer.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "421614": {
+    "name": "Arbitrum Sepolia",
+    "explorers": [
+      {
+        "url": "https://arbitrum-sepolia.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "478549": {
+    "name": "Mintrax Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.mintrax.network",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "482120": {
+    "name": "Bitcoin Swap",
+    "explorers": [
+      {
+        "url": "https://explorer.btcw.tech",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "518848": {
+    "name": "Sovrun L2",
+    "explorers": [
+      {
+        "url": "https://testnet-explorer.sovrun.org/",
+        "hostedBy": "protofire"
+      }
+    ]
+  },
+  "529375": {
+    "name": "LayerK",
+    "explorers": [
+      {
+        "url": "https://explorer.layerk.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "534352": {
+    "name": "Scroll",
+    "explorers": [
+      {
+        "url": "https://scrollscan.com",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "543210": {
+    "name": "ZERϴ Network",
+    "explorers": [
+      {
+        "url": "https://zero-network.calderaexplorer.xyz/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "560048": {
+    "name": "Hoodi",
+    "explorers": [
+      {
+        "url": "https://eth-hoodi.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "612044": {
+    "name": "Cross Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet.crossscan.io/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "612055": {
+    "name": "Cross Mainnet",
+    "explorers": [
+      {
+        "url": "https://www.crossscan.io/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "622277": {
+    "name": "Hypra Network",
+    "explorers": [
+      {
+        "url": "https://explorer.hypra.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "648541": {
+    "name": "LACNet",
+    "explorers": [
+      {
+        "url": "https://explorer.lacnet.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "668668": {
+    "name": "Conwai Mainnet",
+    "explorers": [
+      {
+        "url": "https://conwai.calderaexplorer.xyz/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "685685": {
+    "name": "Gensyn Testnet",
+    "explorers": [
+      {
+        "url": "https://gensyn-testnet.explorer.alchemy.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "685689": {
+    "name": "Gensyn",
+    "explorers": [
+      {
+        "url": "https://gensyn-mainnet.explorer.alchemy.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "688688": {
+    "name": "Pharos Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet.pharosscan.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "715131": {
+    "name": "Zether",
+    "explorers": [
+      {
+        "url": "https://zthscan.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "736826": {
+    "name": "Renta Bluetail",
+    "explorers": [
+      {
+        "url": "https://explorer-bluetail.renta.network/",
+        "hostedBy": "conduit"
+      }
+    ]
+  },
+  "743111": {
+    "name": "Hemi Sepolia",
+    "explorers": [
+      {
+        "url": "https://testnet.explorer.hemi.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "763373": {
+    "name": "Ink Sepolia",
+    "explorers": [
+      {
+        "url": "https://explorer-sepolia.inkonchain.com",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "777777": {
+    "name": "WINR",
+    "explorers": [
+      {
+        "url": "https://explorer.winr.games/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "778889": {
+    "name": "Unitsky String Technologies",
+    "explorers": [
+      {
+        "url": "https://blockscout.byteboost.ru",
+        "hostedBy": "self-hosted"
+      }
+    ]
+  },
+  "786786": {
+    "name": "Zebro Smart Chain",
+    "explorers": [
+      {
+        "url": "https://explorer.zebrocoin.app/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "787111": {
+    "name": "NVNM Chain Testnet",
+    "explorers": [
+      {
+        "url": "https://evm.explorer.testnet.nvnmchain.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "789987": {
+    "name": "Codex",
+    "explorers": [
+      {
+        "url": "https://explorer.testnet.codex.storage/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "800001": {
+    "name": "OctaSpace",
+    "explorers": [
+      {
+        "url": "https://scan.octa.space/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "808813": {
+    "name": "BOB Sepolia",
+    "explorers": [
+      {
+        "url": "https://bob-sepolia.explorer.gobob.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "821207": {
+    "name": "GembaBlockchain Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet.gembascan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "911867": {
+    "name": "Ithica",
+    "explorers": [
+      {
+        "url": "https://odyssey-explorer.ithaca.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "984122": {
+    "name": "Forma",
+    "explorers": [
+      {
+        "url": "https://explorer.forma.art/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1027303": {
+    "name": "Facet Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.facet.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1398243": {
+    "name": "Automata Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer-testnet.ata.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1440000": {
+    "name": "XRPL EVM Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.xrplevm.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1449000": {
+    "name": "XRPL EVM Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.testnet.xrplevm.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1637450": {
+    "name": "Xterio Testnet",
+    "explorers": [
+      {
+        "url": "https://xterio-testnet-explorer.alt.technology/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "3441006": {
+    "name": "Manta Sepolia",
+    "explorers": [
+      {
+        "url": "https://manta-sepolia.explorer.caldera.xyz/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "3502001": {
+    "name": "OPJFIN Chain",
+    "explorers": [
+      {
+        "url": "https://exp.opjfin.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "4423333": {
+    "name": "Radiologex",
+    "explorers": [
+      {
+        "url": "https://explorer.rdgx.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "5042002": {
+    "name": "Arc Testnet",
+    "explorers": [
+      {
+        "url": "http://explorer.testnet.arc.io",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "5201420": {
+    "name": "Electroneum Testnet",
+    "explorers": [
+      {
+        "url": "https://electroneum-testnet.blockscout.com",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "5820948": {
+    "name": "Only Layer",
+    "explorers": [
+      {
+        "url": "https://onlyscan.info",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "7225878": {
+    "name": "Saakuru",
+    "explorers": [
+      {
+        "url": "https://explorer.saakuru.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "7777001": {
+    "name": "SAIHCHAIN GENESIS",
+    "explorers": [
+      {
+        "url": "https://explorer.saihchain.com",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "9322252": {
+    "name": "XCAP",
+    "explorers": [
+      {
+        "url": "https://xcap-mainnet.explorer.xcap.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "10241024": {
+    "name": "AlienX",
+    "explorers": [
+      {
+        "url": "https://explorer.alienxchain.io/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "11142220": {
+    "name": "Celo Sepolia",
+    "explorers": [
+      {
+        "url": "https://celo-sepolia.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "11155111": {
+    "name": "Ethereum Sepolia",
+    "explorers": [
+      {
+        "url": "https://eth-sepolia.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "11155112": {
+    "name": "Aevo Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer-testnet.aevo.xyz/",
+        "hostedBy": "conduit"
+      }
+    ]
+  },
+  "11155420": {
+    "name": "OP Sepolia",
+    "explorers": [
+      {
+        "url": "https://testnet-explorer.optimism.io/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "11155931": {
+    "name": "RISE Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.testnet.riselabs.xyz/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "12082025": {
+    "name": "ONFA Chain",
+    "explorers": [
+      {
+        "url": "https://onfascan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "13863860": {
+    "name": "Symbiosis",
+    "explorers": [
+      {
+        "url": "https://symbiosis.calderaexplorer.xyz/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "16969696": {
+    "name": "Privix Chain Mainnet",
+    "explorers": [
+      {
+        "url": "https://privixscan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "20180427": {
+    "name": "Stability Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.testnet.stabilityprotocol.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "20250407": {
+    "name": "PlatON devnet3",
+    "explorers": [
+      {
+        "url": "https://devnet3blockscout.platon.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "20260532": {
+    "name": "GridMind Testnet",
+    "explorers": [
+      {
+        "url": "https://gridmindblockchain.com/",
+        "hostedBy": "self"
+      },
+      {
+        "url": "https://testnet-explorer.grid-mind.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "20261001": {
+    "name": "Cookchain Mainnet",
+    "explorers": [
+      {
+        "url": "https://blockscout.cookscan.net",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "21000000": {
+    "name": "Corn Maizenet",
+    "explorers": [
+      {
+        "url": "https://maizenet-explorer.usecorn.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "28122024": {
+    "name": "Ancient8 Celestia Testnet",
+    "explorers": [
+      {
+        "url": "https://scanv2-testnet.ancient8.gg/",
+        "hostedBy": "conduit"
+      }
+    ]
+  },
+  "33626250": {
+    "name": "Flashbots",
+    "explorers": [
+      {
+        "url": "https://explorer.toliman.suave.flashbots.net/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "33772211": {
+    "name": "Xone Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet.xonescan.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "65100002": {
+    "name": "Autonity Piccadilly",
+    "explorers": [
+      {
+        "url": "https://piccadilly.autonity.org/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "88888888": {
+    "name": "Tuna Chain",
+    "explorers": [
+      {
+        "url": "https://babytuna.explorer.tunachain.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "89346162": {
+    "name": "Reya Cronos",
+    "explorers": [
+      {
+        "url": "https://reya-cronos.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "245022926": {
+    "name": "Neon Devnet",
+    "explorers": [
+      {
+        "url": "https://neon-devnet.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "245022934": {
+    "name": "Neon",
+    "explorers": [
+      {
+        "url": "https://neon.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "247724776": {
+    "name": "Degree of Outreach testnet",
+    "explorers": [
+      {
+        "url": "https://explorer-testnet.6do.world/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "888888888": {
+    "name": "Ancient8 Mainnet",
+    "explorers": [
+      {
+        "url": "https://scan.ancient8.gg/",
+        "hostedBy": "conduit"
+      }
+    ]
+  },
+  "994873017": {
+    "name": "Lumia Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.lumia.org/",
+        "hostedBy": "gateway"
+      }
+    ]
+  },
+  "999999999": {
+    "name": "Zora Sepolia Testnet",
+    "explorers": [
+      {
+        "url": "https://sepolia.explorer.zora.energy/",
+        "hostedBy": "conduit"
+      }
+    ]
+  },
+  "1093502521": {
+    "name": "Moonveil",
+    "explorers": [
+      {
+        "url": "https://moonveil-testnet-blockscout.eu-north-2.gateway.fm/",
+        "hostedBy": "gateway"
+      }
+    ]
+  },
+  "1313161554": {
+    "name": "Aurora Mainnet",
+    "explorers": [
+      {
+        "url": "https://explorer.mainnet.aurora.dev/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1313161555": {
+    "name": "Aurora Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.testnet.aurora.dev/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1313161567": {
+    "name": "Turbo",
+    "explorers": [
+      {
+        "url": "https://explorer.turbo.aurora.dev/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1350216234": {
+    "name": "Titan AI Hub Testnet",
+    "explorers": [
+      {
+        "url": "https://parallel-stormy-spica.explorer.mainnet.skalenodes.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1417429182": {
+    "name": "WilderWorld",
+    "explorers": [
+      {
+        "url": "https://zephyr-blockscout.eu-north-2.gateway.fm/",
+        "hostedBy": "gateway"
+      }
+    ]
+  },
+  "1570754601": {
+    "name": "Haust network",
+    "explorers": [
+      {
+        "url": "https://explorer-testnet.haust.app/",
+        "hostedBy": "gateway"
+      }
+    ]
+  },
+  "1660990954": {
+    "name": "Status Sepolia Testnet",
+    "explorers": [
+      {
+        "url": "https://sepoliascan.status.network/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "1666600000": {
+    "name": "Harmony",
+    "explorers": [
+      {
+        "url": "https://explorer.harmony.one/",
+        "hostedBy": "protofire"
+      }
+    ]
+  },
+  "1666700000": {
+    "name": "Harmony Testnet",
+    "explorers": [
+      {
+        "url": "https://explorer.testnet.harmony.one/",
+        "hostedBy": "protofire"
+      }
+    ]
+  },
+  "1888108590": {
+    "name": "Prom Devnet",
+    "explorers": [
+      {
+        "url": "https://testnet.promscan.io/",
+        "hostedBy": "gateway"
+      }
+    ]
+  },
+  "1952959480": {
+    "name": "Lumia Testnet",
+    "explorers": [
+      {
+        "url": "https://lumia-testnet-blockscout.eu-north-2.gateway.fm/",
+        "hostedBy": "gateway"
+      }
+    ]
+  },
+  "2030232745": {
+    "name": "Lumia Beam Testnet",
+    "explorers": [
+      {
+        "url": "https://beam-explorer.lumia.org/",
+        "hostedBy": "gateway"
+      }
+    ]
+  },
+  "2046399126": {
+    "name": "Skale",
+    "explorers": [
+      {
+        "url": "https://elated-tan-skat.explorer.mainnet.skalenodes.com/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "3735928814": {
+    "name": "Eden Testnet",
+    "explorers": [
+      {
+        "url": "https://eden-testnet.blockscout.com/",
+        "hostedBy": "blockscout"
+      }
+    ]
+  },
+  "5447216671": {
+    "name": "Hilo Chain",
+    "explorers": [
+      {
+        "url": "https://hiloscan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "5565244900": {
+    "name": "Towns Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet.explorer.towns.com/",
+        "hostedBy": "caldera"
+      }
+    ]
+  },
+  "200820172034": {
+    "name": "OpenGPU Testnet",
+    "explorers": [
+      {
+        "url": "https://testnet.ogpuscan.io/",
+        "hostedBy": "self"
+      }
+    ]
+  },
+  "383414847825": {
+    "name": "Zeniq Smartchain",
+    "explorers": [
+      {
+        "url": "https://zeniqscan.com",
+        "hostedBy": "self"
+      }
+    ]
+  }
+}

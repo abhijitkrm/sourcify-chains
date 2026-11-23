@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - sourcify-chains-default.json
+      - explorer-chain-lists/**
   workflow_dispatch:
 
 env:
@@ -36,6 +37,17 @@ jobs:
           path: sourcify-chains-default.json
           destination: ${{ env.GCS_BUCKET }}
           parent: false
+          headers: |-
+            content-type: application/json
+            cache-control: public, max-age=300, must-revalidate
+
+      # The explorer chain lists that the server reads at boot. They land in
+      # gs://<bucket>/explorer-chain-lists/.
+      - name: Upload explorer chain lists to GCS
+        uses: google-github-actions/upload-cloud-storage@c0f6160ff80057923ff50e5e567695cea181ec23 # v2.2.4
+        with:
+          path: explorer-chain-lists
+          destination: ${{ env.GCS_BUCKET }}
           headers: |-
             content-type: application/json
             cache-control: public, max-age=300, must-revalidate
