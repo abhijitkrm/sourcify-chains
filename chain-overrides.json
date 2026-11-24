@@ -438,6 +438,15 @@
       }
     }
   },
+  "1234571": {
+    "sourcifyName": "Primium Testnet",
+    "rpc": ["https://node1-testnet.codexnetwork.org"],
+    "fetchContractCreationTxUsing": {
+      "blockscoutApi": {
+        "url": "https://explorer-testnet.codexnetwork.org/"
+      }
+    }
+  },
   "1875": {
     "sourcifyName": "Whitechain",
     "rpc": ["https://rpc.whitechain.io"],
